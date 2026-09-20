@@ -86,9 +86,12 @@ export function Visit({ content, site, hours }: VisitProps) {
           >
             <h3 className="flex items-center gap-2.5 font-display text-2xl">
               <Icon name="pin" size={24} className="text-primary" />
-              Adresse &amp; Kontakt
+              Adresse
             </h3>
 
+            {/* Die Telefonnummer steht bewusst nicht noch einmal hier: Sie
+                hat ihren Platz im Reservationskasten daneben, im Kopfbereich
+                und in der Fusszeile. Ein viertes Mal wäre Wiederholung. */}
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <address className="not-italic">
                 <p className="font-bold">{site.name}</p>
@@ -104,16 +107,8 @@ export function Visit({ content, site, hours }: VisitProps) {
                 )}
               </address>
 
-              <div className="flex flex-col items-start gap-3">
-                <a
-                  href={telHref(contact.phoneHref)}
-                  className="btn btn-primary w-full sm:w-auto"
-                >
-                  <Icon name="phone" size={20} />
-                  <span className="tnum">{contact.phone}</span>
-                </a>
-
-                {contact.email && (
+              {contact.email && (
+                <div className="flex flex-col items-start gap-3">
                   <a
                     href={`mailto:${contact.email}`}
                     className="inline-flex min-h-11 items-center gap-2 font-semibold text-foreground underline decoration-2 underline-offset-4 transition-colors duration-200 hover:text-primary"
@@ -121,8 +116,8 @@ export function Visit({ content, site, hours }: VisitProps) {
                     <Icon name="mail" size={20} className="text-primary" />
                     {contact.email}
                   </a>
-                )}
-              </div>
+                </div>
+              )}
             </div>
 
             {/* Karte: fertiges Bild aus Kartenkacheln ohne Beschriftung,
