@@ -13,8 +13,11 @@ Die Seite trägt deshalb oben einen Hinweis «Beispielseite» (`demoMode` in
 
 <https://mauricestuder.github.io/demo-takeaway/>
 
-Wird automatisch neu gebaut, sobald etwas nach `main` gepusht wird
-([`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml)).
+Veröffentlichen (baut lokal und schiebt das Ergebnis in den Zweig `gh-pages`):
+
+```bash
+npm run deploy
+```
 
 ## Lokal starten
 
