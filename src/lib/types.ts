@@ -202,56 +202,6 @@ export interface Menu {
 }
 
 /* ------------------------------------------------------------------ */
-/* Bewertungen                                                         */
-/* ------------------------------------------------------------------ */
-
-/**
- * Bewusst als Zusammenfassung modelliert statt als erfundene Einzelzitate:
- * Es werden nur die aggregierte Bewertung mit Quellenangabe und wiederkehrende
- * Themen gezeigt. Echte, freigegebene Zitate können später in `quotes`.
- */
-export interface RatingSummary {
-  value: number;
-  max: number;
-  count: number;
-  /** Woher die Bewertung stammt, z. B. "Google". Wird sichtbar genannt. */
-  source: string;
-  sourceUrl: string;
-}
-
-export interface ReviewTheme {
-  id: string;
-  icon: IconName;
-  label: string;
-  text: string;
-  /**
-   * Kurzfassung fuer schmale Bildschirme. Auf dem Handy steht eine Karte
-   * ueber die volle Breite; die ausformulierte Fassung laeuft dort ueber
-   * rund zehn Zeilen. Fehlt das Feld, wird ueberall `text` gezeigt.
-   */
-  textShort?: string;
-}
-
-export interface ReviewQuote {
-  id: string;
-  quote: string;
-  author: string;
-  meta?: string;
-  rating: number;
-}
-
-export interface ReviewsContent {
-  eyebrow: string;
-  title: string;
-  intro?: string;
-  rating: RatingSummary | null;
-  themes: ReviewTheme[];
-  /** Leer lassen, bis echte, freigegebene Zitate vorliegen. */
-  quotes: ReviewQuote[];
-  quotesPlaceholder?: string;
-}
-
-/* ------------------------------------------------------------------ */
 /* Redaktionelle Texte                                                 */
 /* ------------------------------------------------------------------ */
 
@@ -348,5 +298,4 @@ export interface SiteContent {
   pages: PagesContent;
   menu: Menu;
   hours: OpeningHours;
-  reviews: ReviewsContent;
 }

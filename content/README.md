@@ -13,7 +13,6 @@ etwas ändert, ändert die Seite — Programmierkenntnisse sind dafür nicht nö
 | `pages.json` | Alle Texte der Startseite: Hero, Highlights, Über uns, Besuch, Footer |
 | `menu.json` | Die komplette Speisekarte: Kategorien, Gerichte, Preise, Kennzeichnungen |
 | `hours.json` | Öffnungszeiten |
-| `reviews.json` | Bewertungen: Gesamtnote mit Quelle und echte Zitate |
 | `legal.json` | Impressum und Datenschutz |
 
 Nach jeder Änderung: Datei speichern — die Seite aktualisiert sich im
@@ -29,8 +28,7 @@ Diese Seite zeigt einen **erfundenen** Betrieb. Für einen echten Kunden:
 2. **`menu.json`** → Speisekarte und Preise vom Kunden bestätigen lassen
 3. **`hours.json`** → Öffnungszeiten bestätigen, danach `note` prüfen
 4. **`legal.json`** → Impressum und Datenschutz vervollständigen (rechtlich prüfen lassen)
-5. **`reviews.json`** → nur echte, freigegebene Angaben
-6. **`site.json`** → `demoMode` auf `false` setzen, damit der Beispiel-Hinweis verschwindet
+5. **`site.json`** → `demoMode` auf `false` setzen, damit der Beispiel-Hinweis verschwindet
 
 ---
 
@@ -99,30 +97,6 @@ Schweizer Zeit, egal wo der Gast gerade ist.
 
 ---
 
-## Bewertungen (`reviews.json`)
-
-Hier gilt eine harte Regel: **keine erfundenen Zitate.** Eine Gästestimme, die
-niemand gesagt hat, ist in der Schweiz unlautere Werbung — und fällt ausserdem
-auf, sobald jemand die Bewertungsseite aufruft.
-
-```json
-"rating": {
-  "value": 3.9, "max": 5, "count": 231,
-  "source": "Google", "sourceUrl": "https://…"
-}
-```
-
-- `rating` zeigt die Gesamtnote mit Quellenangabe und Link. Auf `null` setzen,
-  wenn keine Note gezeigt werden soll.
-- `themes` sind selbst formulierte Aussagen über den Betrieb — keine Zitate.
-- `quotes` bleibt leer (`[]`), bis echte, freigegebene Gästestimmen vorliegen.
-  Der Abschnitt erscheint erst, sobald mindestens ein Eintrag darin steht.
-
-Die Note wird bewusst **nicht** in die strukturierten Daten für Google
-geschrieben: Wer fremde Bewertungen auf der eigenen Seite auszeichnet, riskiert
-eine Abstrafung.
-
----
 
 ## Preise
 

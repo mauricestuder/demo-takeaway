@@ -2,14 +2,12 @@ import menuData from "@content/menu.json";
 import hoursData from "@content/hours.json";
 import pagesData from "@content/pages.json";
 import siteData from "@content/site.json";
-import reviewsData from "@content/reviews.json";
 
 import type {
   Menu,
   OpeningHours,
   PagesContent,
   SiteConfig,
-  ReviewsContent,
   SiteContent,
 } from "./types";
 
@@ -48,20 +46,15 @@ export async function getHours(): Promise<OpeningHours> {
   return hoursData as unknown as OpeningHours;
 }
 
-export async function getReviews(): Promise<ReviewsContent> {
-  return reviewsData as unknown as ReviewsContent;
-}
-
 export async function getContent(): Promise<SiteContent> {
-  const [site, pages, menu, hours, reviews] = await Promise.all([
+  const [site, pages, menu, hours] = await Promise.all([
     getSite(),
     getPages(),
     getMenu(),
     getHours(),
-    getReviews(),
   ]);
 
-  return { site, pages, menu, hours, reviews };
+  return { site, pages, menu, hours };
 }
 
 /** Alle als `featured` markierten Gerichte über sämtliche Kategorien hinweg. */

@@ -54,7 +54,6 @@ content/
 ├── pages.json     Texte der Startseite (Hero, Gründe, Über uns, Besuch, Footer)
 ├── menu.json      Speisekarte inkl. Weinkarte
 ├── hours.json     Öffnungszeiten
-├── reviews.json   Drei Aussagen über den Betrieb (keine erfundenen Zitate, keine Note)
 └── legal.json     Impressum und Datenschutz
 ```
 

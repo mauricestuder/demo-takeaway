@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero";
 import { Highlights } from "@/components/Highlights";
 import { JsonLd } from "@/components/JsonLd";
 import { MenuSection } from "@/components/MenuSection";
-import { Reviews } from "@/components/Reviews";
 import { Ticker } from "@/components/Ticker";
 import { Visit } from "@/components/Visit";
 import { getContent } from "@/lib/content";
@@ -12,10 +11,10 @@ import { getContent } from "@/lib/content";
 /**
  * Reihenfolge nach dem Hero-Centric-Muster:
  * Hero (dominant, eine primäre Aktion) → Angebotsstreifen → Speisekarte als
- * Hauptinhalt → Gründe → Bewertungen als Vertrauensanker → Über uns → Besuch.
+ * Hauptinhalt → Gründe → Über uns → Besuch.
  */
 export default async function HomePage() {
-  const { site, pages, menu, hours, reviews } = await getContent();
+  const { site, pages, menu, hours } = await getContent();
 
   return (
     <>
@@ -30,8 +29,6 @@ export default async function HomePage() {
       <MenuSection content={pages.menuSection} menu={menu} />
 
       <Highlights content={pages.highlights} />
-
-      <Reviews content={reviews} />
 
       <About content={pages.about} />
 

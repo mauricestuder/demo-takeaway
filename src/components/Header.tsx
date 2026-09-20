@@ -10,7 +10,6 @@ import type { OpeningHours, SiteConfig } from "@/lib/types";
 const NAV = [
   { label: "Speisekarte", href: "#speisekarte" },
   { label: "Warum Firestone", href: "#highlights" },
-  { label: "Bewertungen", href: "#bewertungen" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Besuch", href: "#besuch" },
 ];

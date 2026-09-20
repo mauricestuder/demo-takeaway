@@ -11,7 +11,7 @@ Kunden werden sie durch dessen eigene Aufnahmen ersetzt.
 Datei                    Quelle                      Verwendung
 -----------------------  --------------------------  -------------------------
 hero-hintergrund.webp    pexels.com/photo/36815988   Kopfbereich (2000x1000)
-lokal.webp               pexels.com/photo/12638920   Ueber uns (1200x900)
+lokal.webp               pexels.com/photo/16625669   Ueber uns (1200x900)
 entrecote.webp           pexels.com/photo/11089589   Karte, Entrecote
 ribeye.webp              pexels.com/photo/15955383   Karte, Ribeye
 filet.webp               pexels.com/photo/1639561    Karte, Filet
@@ -24,7 +24,10 @@ Schrift darauf erreichte den Mindestkontrast sonst nicht (nachzurechnen
 mit `npm run check:hero`). Ausschnitt: Zeilen 780 bis 1980 des
 Originals (2400x3000), damit das Steak und nicht nur der Rauch im Bild ist.
 
-Auf keinem Bild sind Personen oder fremde Marken zu sehen. Das Bild mit
+Auf lokal.webp steht ein Koch mit dem Ruecken zur Kamera, nicht erkennbar;
+Zuschnitt Zeilen 560 bis 2360 des Originals (2400x3600), damit die
+Saucenflaschen am unteren Rand wegfallen. Sonst keine Personen, nirgends
+fremde Marken. Das Bild mit
 Weinflasche aus der Suche (11898906) wurde deshalb nicht verwendet — das
 Etikett ist lesbar.
 
