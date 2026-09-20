@@ -9,7 +9,7 @@ import type { OpeningHours, SiteConfig } from "@/lib/types";
 
 const NAV = [
   { label: "Speisekarte", href: "#speisekarte" },
-  { label: "Warum Sesam", href: "#highlights" },
+  { label: "Warum Firestone", href: "#highlights" },
   { label: "Bewertungen", href: "#bewertungen" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Besuch", href: "#besuch" },
@@ -31,8 +31,9 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const sentinel = useRef<HTMLDivElement>(null);
 
-  // Oben ueber dem Foto: helle Schrift. Sobald der weisse Balken da ist —
-  // beim Scrollen oder bei offenem Menue — wieder die dunkle.
+  // Die Seite ist durchgehend dunkel, die Schrift bleibt also immer Creme.
+  // Ueber dem Foto bekommt sie nur einen Schatten, damit sie auf hellen
+  // Bildstellen (Rauch) nicht absaeuft.
   const aufFoto = heroHasPhoto && !scrolled && !menuOpen;
   const toggleRef = useRef<HTMLButtonElement>(null);
 
@@ -99,7 +100,7 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
               Ohne ihn sieht die Wortmarke nicht anklickbar aus. */}
           <a
             href="#top"
-            className="flex min-h-11 items-center rounded-lg opacity-100 transition-opacity duration-200 hover:opacity-70"
+            className="flex min-h-11 items-center rounded-sm opacity-100 transition-opacity duration-200 hover:opacity-70"
             aria-label={`${site.name} — zum Seitenanfang`}
           >
             <Logo onDark={aufFoto} />
@@ -111,12 +112,8 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className={`inline-flex min-h-11 items-center rounded-full px-3.5 font-semibold transition-colors duration-200 ${
-                      aufFoto
-                        ? // Rot erreicht auf dem Foto nur rund 1.5:1 und fällt als
-                          // Hover-Farbe aus; das helle Rosé der Akzentzeile passt.
-                          "text-background hover:text-border [text-shadow:0_1px_8px_rgba(38,24,20,0.55)]"
-                        : "text-foreground hover:text-primary"
+                    className={`inline-flex min-h-11 items-center whitespace-nowrap rounded-sm px-3.5 text-[0.8125rem] font-semibold uppercase tracking-[0.14em] text-foreground transition-colors duration-200 hover:text-primary ${
+                      aufFoto ? "[text-shadow:0_1px_8px_rgba(16,14,12,0.7)]" : ""
                     }`}
                   >
                     {item.label}
@@ -134,14 +131,14 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
               className="btn btn-primary hidden !min-h-11 !px-5 !text-[0.9375rem] sm:inline-flex"
             >
               <Icon name="phone" size={18} />
-              Anrufen
+              Reservieren
             </a>
 
             <button
               ref={toggleRef}
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
-              className="grid h-12 w-12 cursor-pointer place-items-center rounded-full border-2 border-border bg-card text-foreground transition-colors duration-200 hover:border-primary hover:text-primary lg:hidden"
+              className="grid h-12 w-12 cursor-pointer place-items-center rounded-sm border border-border bg-card text-foreground transition-colors duration-200 hover:border-primary hover:text-primary lg:hidden"
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               aria-label={menuOpen ? "Menü schliessen" : "Menü öffnen"}
@@ -157,7 +154,7 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
       <div
         aria-hidden="true"
         onClick={() => setMenuOpen(false)}
-        className={`fixed inset-0 z-30 bg-foreground/50 transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-30 bg-black/60 transition-opacity duration-300 lg:hidden ${
           menuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
@@ -170,20 +167,14 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
           verschoben: Ein ausgeblendetes Element kann nicht animiert
           einfahren. `inert` hält es solange aus Fokus und Vorlesereihenfolge
           heraus. */}
-      {/* Die Fläche ist dunkel, nicht hell. Eine helle durchscheinende
-          Fläche nimmt zwangsläufig den Farbton dessen an, was dahinter
-          liegt — über dem warmen Hero-Foto wurde daraus ein Rosastich,
-          auch mit einem völlig neutralen Grauweiss. Dunkel bleibt dunkel.
-
-          Der Farbwert ist derselbe wie beim Schleier über dem Hero-Foto,
-          damit beides zusammengehört. Der Weichzeichner ist nicht Zierde:
-          Ohne ihn liegt die Schrift stellenweise direkt auf den Kanten des
-          Fotos. */}
+      {/* Die Fläche ist der Seitengrund, leicht durchscheinend und
+          weichgezeichnet: Ohne den Weichzeichner liegt die Schrift
+          stellenweise direkt auf den Kanten des Fotos. */}
       <div
         id="mobile-nav"
         inert={!menuOpen}
         aria-hidden={!menuOpen}
-        className={`fixed inset-y-0 right-0 z-40 w-[min(17.5rem,72vw)] border-l-2 border-background/20 bg-[rgba(38,24,20,0.62)] backdrop-blur-xl shadow-[-18px_0_50px_-24px_rgba(38,24,20,0.6)] transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed inset-y-0 right-0 z-40 w-[min(17.5rem,72vw)] border-l border-primary/30 bg-[rgba(16,14,12,0.88)] backdrop-blur-xl shadow-[-18px_0_50px_-24px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-out lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -194,18 +185,14 @@ export function Header({ site, hours, heroHasPhoto = false }: HeaderProps) {
           <nav aria-label="Mobile Navigation">
             <ul className="flex flex-col">
               {NAV.map((item, index) => (
-                <li key={item.href} className="border-b border-background/20">
+                <li key={item.href} className="border-b border-foreground/15">
                   <a
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center justify-between py-4 font-display text-xl font-bold text-background"
+                    className="flex items-center justify-between py-4 font-display text-xl font-semibold text-foreground"
                   >
                     {item.label}
-                    {/* Die Nummer tritt zurück, aber nicht zu weit: Das Gold
-                        der hellen Ansicht wäre hier zu dunkel, und bei 55 %
-                        Deckkraft kam die Ziffer auf 3.9:1 — unter den 4.5:1,
-                        die 14-px-Text braucht, bei 70 % auf 4.15:1. */}
-                    <span className="tnum text-sm font-bold tracking-[0.1em] text-background/85">
+                    <span className="tnum text-sm font-semibold tracking-[0.1em] text-primary-text">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </a>

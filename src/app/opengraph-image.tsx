@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getSite } from "@/lib/content";
 
-export const alt = "Sesam – Kebab & Take Away in Liestal";
+export const alt = "Firestone – Steakhouse & Grill in Liestal";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -15,7 +15,7 @@ export const dynamic = "force-static";
  * Wird beim Build automatisch erzeugt und passt sich an die Inhalte aus
  * content/site.json an — es muss also nie manuell nachgezeichnet werden.
  * Farben und Aufbau folgen denselben Tokens wie die Seite (globals.css):
- * warmes Rot auf hellem Grund, Gold als zweiter Akzent.
+ * Creme und Gold auf fast schwarzem Grund.
  *
  * Hinweis für spätere Änderungen: Satori (der Renderer hinter next/og)
  * verlangt bei mehreren Kindelementen ein explizites `display`. Textzeilen
@@ -34,7 +34,7 @@ export default async function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           background:
-            "radial-gradient(900px 520px at 15% 0%, #fff7f5 0%, #fef2f2 55%, #fde4e4 100%)",
+            "radial-gradient(900px 520px at 85% 0%, #2a1a12 0%, #151210 55%, #100e0c 100%)",
           padding: 72,
           fontFamily: "sans-serif",
         }}
@@ -44,9 +44,10 @@ export default async function OpengraphImage() {
             style={{
               width: 76,
               height: 76,
-              borderRadius: 18,
-              background: "#dc2626",
-              color: "#ffffff",
+              borderRadius: 0,
+              border: "3px solid #d4af5a",
+              background: "#1a1613",
+              color: "#d4af5a",
               fontSize: 46,
               fontWeight: 800,
               display: "flex",
@@ -54,24 +55,24 @@ export default async function OpengraphImage() {
               justifyContent: "center",
             }}
           >
-            S
+            F
           </div>
           <div
             style={{
-              color: "#450a0a",
+              color: "#f1e8d8",
               fontSize: 34,
               fontWeight: 700,
-              letterSpacing: 6,
+              letterSpacing: 8,
             }}
           >
-            SESAM
+            FIRESTONE
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              color: "#7c4a05",
+              color: "#d4af5a",
               fontSize: 24,
               fontWeight: 700,
               letterSpacing: 8,
@@ -82,15 +83,15 @@ export default async function OpengraphImage() {
           </div>
           <div
             style={{
-              color: "#450a0a",
+              color: "#f1e8d8",
               fontSize: 92,
-              fontWeight: 800,
+              fontWeight: 700,
               lineHeight: 1.02,
-              letterSpacing: -2,
+              letterSpacing: 0,
               maxWidth: 940,
             }}
           >
-            {`${site.tagline} — frisch vom Drehspiess.`}
+            {`${site.tagline} — über Holzkohle gegrillt.`}
           </div>
         </div>
 
@@ -99,11 +100,11 @@ export default async function OpengraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 16,
-            color: "#7c2d2d",
+            color: "#b3a48f",
             fontSize: 26,
           }}
         >
-          <div style={{ width: 56, height: 4, background: "#dc2626" }} />
+          <div style={{ width: 56, height: 2, background: "#d4af5a" }} />
           <span>
             {`${site.address.street}, ${site.address.zip} ${site.address.city}`}
           </span>

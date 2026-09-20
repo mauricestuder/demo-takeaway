@@ -11,8 +11,8 @@ const STYLES: Record<ItemBadge, string> = {
   vegetarisch: "border-success/35 bg-success/10 text-success",
   vegan: "border-success/35 bg-success/10 text-success",
   scharf: "border-primary/35 bg-primary/10 text-primary-text",
-  neu: "border-accent/40 bg-accent/10 text-accent-text",
-  beliebt: "border-accent/40 bg-accent/10 text-accent-text",
+  neu: "border-accent/40 bg-accent/10 text-primary-text",
+  beliebt: "border-accent/40 bg-accent/10 text-primary-text",
   hausgemacht: "border-border bg-muted text-muted-foreground",
 };
 
@@ -28,7 +28,7 @@ const LABELS: Record<ItemBadge, string> = {
 export function MenuBadge({ badge }: { badge: ItemBadge }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.08em] ${STYLES[badge]}`}
+      className={`inline-flex items-center rounded-sm border px-2.5 py-0.5 text-[0.6875rem] font-bold uppercase tracking-[0.08em] ${STYLES[badge]}`}
     >
       {LABELS[badge]}
     </span>

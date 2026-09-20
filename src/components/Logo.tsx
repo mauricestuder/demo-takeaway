@@ -5,7 +5,7 @@ interface LogoProps {
   withTagline?: boolean;
   /** "sm" für die Kopfzeile, "xl" für die Markentafel im Hero. */
   size?: "sm" | "xl";
-  /** Auf dunklem Grund werden Name und Zusatzzeile hell gesetzt. */
+  /** Über dem Foto: Zusatzzeile in hellerem Gold. Die Seite ist durchgehend dunkel, der Name bleibt Creme. */
   onDark?: boolean;
   className?: string;
 }
@@ -33,21 +33,21 @@ export function Logo({
 
       <span className="flex flex-col leading-none">
         <span
-          className={`font-display font-bold tracking-tight ${
-            isXl ? "text-4xl sm:text-5xl" : "text-xl"
-          } ${onDark ? "text-background" : "text-foreground"}`}
+          className={`font-display font-semibold uppercase tracking-[0.06em] ${
+            isXl ? "text-4xl sm:text-5xl" : "text-lg"
+          } text-foreground`}
         >
-          Sesam
+          Firestone
         </span>
         {withTagline && (
           <span
-            className={`font-bold uppercase ${
+            className={`font-semibold uppercase ${
               isXl
                 ? "mt-2.5 text-[0.6875rem] tracking-[0.2em] sm:mt-3 sm:text-xs sm:tracking-[0.26em]"
                 : "mt-1.5 text-[0.6875rem] tracking-[0.16em]"
             } ${onDark ? "text-accent-on-dark" : "text-accent-text"}`}
           >
-            Kebab &amp; Take Away
+            Steakhouse &amp; Grill
           </span>
         )}
       </span>

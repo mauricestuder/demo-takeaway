@@ -1,24 +1,24 @@
 {
   "hero": {
-    "eyebrow": "Mitten in Liestal",
+    "eyebrow": "Steakhouse in Liestal",
     "titleLines": [
-      "Kebab,",
-      "frisch vom",
-      "Drehspiess."
+      "Feuer.",
+      "Rauch.",
+      "Fleisch."
     ],
-    "subtitle": "Döner, Dürüm, Pide und Pizza an der Musterstrasse 12. Zum Mitnehmen oder gemütlich bei uns – drinnen und draussen.",
+    "subtitle": "Schweizer Rind, 28 Tage am Knochen gereift und über Holzkohle gegrillt. An der Musterstrasse 12, mitten in Liestal.",
     "primaryCta": {
+      "label": "Tisch reservieren",
+      "href": "tel:+41610000000"
+    },
+    "secondaryCta": {
       "label": "Zur Speisekarte",
       "href": "#speisekarte"
     },
-    "secondaryCta": {
-      "label": "061 000 00 00",
-      "href": "tel:+41610000000"
-    },
     "facts": [
-      "Sitzplätze drinnen & draussen",
-      "Zum Mitnehmen",
-      "Twint"
+      "Holzkohlegrill",
+      "Dry Aged 28 Tage",
+      "Reservation empfohlen"
     ],
     "image": {
       "src": "/images/hero-hintergrund.webp",
@@ -27,87 +27,91 @@
     }
   },
   "valueStrip": [
-    "Kebab",
-    "Dürüm",
-    "Pide",
-    "Pizza",
-    "Falafel",
-    "Lahmacun",
-    "Salate",
-    "Pommes"
+    "Entrecôte",
+    "Ribeye",
+    "Filet",
+    "Tomahawk",
+    "T-Bone",
+    "Lamm",
+    "Weine",
+    "Desserts"
   ],
   "highlights": {
-    "eyebrow": "Warum Sesam",
-    "title": "Drei gute Gründe",
+    "eyebrow": "Warum Firestone",
+    "title": "Drei Gründe",
     "items": [
       {
         "id": "h1",
-        "icon": "pin",
+        "icon": "flame",
         "tone": "primary",
-        "fact": "Mitten in der Altstadt",
-        "title": "Kurzer Weg, kurze Wartezeit",
-        "text": "Wir liegen an der Musterstrasse, zwei Minuten vom Bahnhof und gleich beim Parkhaus. Wer es eilig hat, ruft kurz vorher an und holt die Bestellung im Vorbeigehen ab.",
-        "textShort": "Zwei Minuten vom Bahnhof. Vorbestellen per Telefon, abholen im Vorbeigehen."
+        "fact": "Holzkohle, 800 Grad",
+        "title": "Über offenem Feuer",
+        "text": "Kein Gas, keine Platte: Jedes Stück Fleisch liegt auf dem Rost über Buchenholzkohle. Die Hitze schliesst die Kruste in Sekunden, innen bleibt das Fleisch saftig — und der Rauch ist die einzige Würze, die es braucht.",
+        "textShort": "Jedes Stück Fleisch über Buchenholzkohle gegrillt. Kruste in Sekunden, innen saftig."
       },
       {
         "id": "h2",
-        "icon": "flame",
+        "icon": "clock",
         "tone": "accent",
-        "fact": "Jeden Tag frisch",
-        "title": "Brot und Spiess aus dem eigenen Haus",
-        "text": "Das Fladenbrot backen wir mehrmals täglich selbst, der Drehspiess wird jeden Morgen neu aufgesetzt. Was am Abend übrig bleibt, kommt am nächsten Tag nicht mehr auf die Karte.",
-        "textShort": "Fladenbrot mehrmals täglich selbst gebacken, Spiess jeden Morgen neu."
+        "fact": "28 Tage gereift",
+        "title": "Dry Aged im eigenen Schrank",
+        "text": "Das Rind reift 28 Tage am Knochen in unserem Reifeschrank neben dem Eingang. Die Zeit macht das Fleisch mürbe und den Geschmack tief — ein Unterschied, den man beim ersten Bissen merkt.",
+        "textShort": "28 Tage am Knochen gereift, im eigenen Reifeschrank neben dem Eingang."
       },
       {
         "id": "h3",
-        "icon": "hand",
-        "tone": "success",
-        "fact": "Drinnen & draussen",
-        "title": "Mitnehmen oder bleiben",
-        "text": "Sitzplätze gibt es drinnen und draussen, der Zugang ist rollstuhlgängig. Und wer lieber zu Hause isst, lässt sich alles von der Karte einpacken — bezahlt wird bar, mit Karte oder Twint.",
-        "textShort": "Sitzplätze drinnen und draussen, rollstuhlgängig. Bezahlt wird bar, mit Karte oder Twint."
+        "icon": "pin",
+        "tone": "primary",
+        "fact": "Aus dem Baselbiet",
+        "title": "Drei Höfe, keine Umwege",
+        "text": "Unser Rind kommt von drei Höfen zwischen Sissach und Reigoldswil. Wir kennen die Bauern, sie kennen unsere Ansprüche — und die Wege sind kurz genug, dass wir jede Woche selbst hinfahren.",
+        "textShort": "Rind von drei Höfen zwischen Sissach und Reigoldswil. Wir kennen die Bauern."
       }
     ]
   },
   "menuSection": {
     "title": "Speisekarte",
-    "intro": "Kebab vom Drehspiess, dazu Pide, Lahmacun, Falafel, Burger und zehn Pizzas — alles frisch zubereitet."
+    "intro": "Steaks vom Holzkohlegrill, dazu Vorspeisen, Beilagen, Desserts und eine kurze, gut sortierte Weinkarte."
   },
   "about": {
     "eyebrow": "Über uns",
-    "title": "Kurz zu uns",
+    "title": "Das Haus",
     "paragraphs": [
-      "Sesam ist ein kleiner Kebab-Take-away in der Liestaler Altstadt. Seit 2015 kochen wir hier für unterwegs, für die Mittagspause und für alle, die abends noch etwas Warmes wollen.",
-      "Hinter dem Tresen steht die Familie Demir: Vater Ali am Spiess, Mutter Ayse am Ofen, und am Wochenende helfen die beiden Kinder beim Einpacken. Die Rezepte stammen aus Adana — vor allem die Joghurt-Sauce, die wir jeden Morgen frisch anrühren."
+      "Firestone ist ein Steakhouse in der Liestaler Altstadt. Seit 2018 steht der Holzkohlegrill in der Mitte des Raums — wer eintritt, sieht zuerst das Feuer und dann den Reifeschrank.",
+      "Küchenchef Marco Brenner hat zehn Jahre in Buenos Aires und Zürich gegrillt, bevor er das Haus mit seiner Frau Lena eröffnet hat. Sie führt den Service und die Weinkarte: sechzig Plätze drinnen, zwanzig im Hof, und eine Karte, die bewusst kurz bleibt."
     ],
     "stats": [
       {
-        "value": "2015",
+        "value": "2018",
         "label": "eröffnet"
       },
       {
-        "value": "7",
-        "label": "Tage pro Woche offen"
+        "value": "28",
+        "label": "Tage gereift"
       },
       {
-        "value": "100 m",
-        "label": "zum Parkhaus"
+        "value": "80",
+        "label": "Sitzplätze"
       }
     ],
     "image": {
       "src": "/images/lokal.webp",
-      "alt": "Zwei Drehspiesse mit Fleisch hinter dem Tresen eines Take-aways.",
+      "alt": "Gedämpft beleuchteter Gastraum mit Ledersitzbank und gedeckten Tischen.",
       "placeholderLabel": "Über uns"
     }
   },
   "visit": {
     "eyebrow": "Besuch",
-    "title": "Vorbeikommen",
-    "intro": "Öffnungszeiten, Adresse und Telefonnummer auf einen Blick.",
+    "title": "Reservieren und vorbeikommen",
+    "intro": "Öffnungszeiten, Adresse und Reservation auf einen Blick.",
     "infos": [
       {
+        "label": "Reservation",
+        "value": "Telefonisch, ab 6 Personen empfohlen"
+      },
+      {
         "label": "Sitzplätze",
-        "value": "Drinnen und draussen"
+        "value": "60 drinnen, 20 im Hof"
       },
       {
         "label": "Zugang",
@@ -124,7 +128,7 @@
     ]
   },
   "footer": {
-    "note": "Kebab & Take Away an der Musterstrasse 12, mitten in Liestal.",
+    "note": "Steakhouse & Grill an der Musterstrasse 12, mitten in Liestal.",
     "legalLinks": [
       {
         "label": "Impressum",

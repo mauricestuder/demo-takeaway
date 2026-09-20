@@ -33,7 +33,7 @@ export function About({ content }: { content: AboutContent }) {
               image={content.image}
               ratio={null}
               sizes="(min-width: 1024px) 40vw, 92vw"
-              className="aspect-[16/10] rounded-2xl border-2 border-border lg:aspect-[5/4]"
+              className="aspect-[16/10] rounded-sm border border-border lg:aspect-[5/4]"
             />
           </div>
 
@@ -51,7 +51,7 @@ export function About({ content }: { content: AboutContent }) {
             <dl
               data-reveal
               style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
-              className="mt-7 grid grid-cols-3 gap-4 border-t-2 border-border pt-6"
+              className="mt-7 grid grid-cols-3 gap-4 border-t border-border pt-6"
             >
               {content.stats.map((stat) => (
                 <div key={stat.label}>

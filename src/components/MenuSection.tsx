@@ -42,7 +42,7 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
         {menu.priceNotice && (
           <p
             data-reveal
-            className="mt-5 flex items-start gap-2 rounded-xl border-2 border-accent/30 bg-accent/[0.07] px-3.5 py-2.5 text-sm font-semibold text-accent-text sm:mt-7 sm:gap-2.5 sm:px-4 sm:py-3 sm:text-[0.9375rem]"
+            className="mt-5 flex items-start gap-2 rounded-sm border border-accent/30 bg-accent/[0.07] px-3.5 py-2.5 text-sm font-semibold text-primary-text sm:mt-7 sm:gap-2.5 sm:px-4 sm:py-3 sm:text-[0.9375rem]"
           >
             <Icon name="sparkle" size={20} className="mt-0.5 shrink-0" />
             {menu.priceNotice}
@@ -57,7 +57,7 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
                 data-reveal
                 style={{ "--reveal-delay": `${index * 60}ms` } as React.CSSProperties}
               >
-                <article className="card h-full border-2 transition-colors duration-200 hover:border-primary">
+                <article className="card h-full border transition-colors duration-200 hover:border-primary">
                   <SmartImage
                     image={item.image}
                     ratio="4 / 3"
@@ -66,7 +66,7 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
                   />
 
                   <div className="p-3 sm:p-5">
-                    <p className="hidden text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-accent-text sm:block">
+                    <p className="hidden text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-primary-text sm:block">
                       {item.categoryName}
                     </p>
                     <h3 className="break-words font-display text-[0.9375rem] leading-snug hyphens-auto sm:mt-2 sm:text-xl">
@@ -154,7 +154,7 @@ export function MenuSection({ content, menu }: MenuSectionProps) {
                           key={item.id}
                           className="flex items-baseline gap-1.5 text-sm"
                         >
-                          <span aria-hidden="true" className="font-bold text-accent-text">
+                          <span aria-hidden="true" className="font-bold text-primary-text">
                             +
                           </span>
                           <span className="font-semibold text-muted-foreground">
@@ -191,7 +191,7 @@ function MenuRow({ item, currency }: { item: MenuItem; currency: string }) {
   return (
     // Auf dem Handy ein Kästchen, ab 640 px wieder die klassische Kartenzeile:
     // kein Rahmen, dafür Punktlinie und Hover-Fläche wie ursprünglich.
-    <div className="h-full rounded-lg border border-border bg-card px-3 py-2.5 transition-colors duration-200 hover:border-primary sm:-mx-3 sm:h-auto sm:border-0 sm:bg-transparent sm:py-4 sm:hover:bg-card">
+    <div className="h-full rounded-sm border border-border bg-card px-3 py-2.5 transition-colors duration-200 hover:border-primary sm:-mx-3 sm:h-auto sm:border-0 sm:bg-transparent sm:py-4 sm:hover:bg-card">
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
         {/* break-words als harte Absicherung: Chrome trennt lange deutsche
             Komposita in schmalen Spalten auch mit hyphens-auto nicht. */}
@@ -203,7 +203,7 @@ function MenuRow({ item, currency }: { item: MenuItem; currency: string }) {
             dafür schlicht die Breite. */}
         <span
           aria-hidden="true"
-          className="hidden min-w-6 flex-1 translate-y-[-0.25rem] border-b-2 border-dotted border-border sm:block"
+          className="hidden min-w-6 flex-1 translate-y-[-0.25rem] border-b border-dotted border-border sm:block"
         />
 
         <span className="tnum mt-1.5 text-[0.9375rem] font-bold text-primary-text sm:mt-0 sm:shrink-0 sm:text-[1.0625rem]">

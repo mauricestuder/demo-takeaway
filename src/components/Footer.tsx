@@ -13,7 +13,7 @@ export function Footer({ content, site }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t-2 border-border bg-surface-warm">
+    <footer className="relative border-t border-border bg-surface-warm">
       <div className="container-page py-12">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
@@ -23,7 +23,7 @@ export function Footer({ content, site }: FooterProps) {
 
           <div className="grid gap-10 sm:grid-cols-2">
             <div>
-              <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-accent-text">
+              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-primary-text">
                 Kontakt
               </h2>
               <ul className="mt-4 flex flex-col gap-1">
@@ -45,7 +45,7 @@ export function Footer({ content, site }: FooterProps) {
             </div>
 
             <div>
-              <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-accent-text">
+              <h2 className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-primary-text">
                 Seite
               </h2>
               <ul className="mt-4 flex flex-col">
@@ -80,7 +80,7 @@ export function Footer({ content, site }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-10 border-t-2 border-border pt-6 text-sm text-muted-foreground">
+        <div className="mt-10 border-t border-border pt-6 text-sm text-muted-foreground">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <p className="tnum">
               © {year} {site.legalName ?? site.name}
@@ -90,37 +90,6 @@ export function Footer({ content, site }: FooterProps) {
             </p>
           </div>
 
-          {/* Pflichtangabe, keine Höflichkeit: Das Foto der Döner Box steht
-              unter CC BY 2.0. Die Lizenz erlaubt auch die gewerbliche
-              Nutzung, verlangt dafür aber Namen, Lizenz, Fundstelle und den
-              Hinweis auf Bearbeitung — und zwar sichtbar auf der Seite, nicht
-              nur in einer Datei im Repository. Alle übrigen Bilder stammen von
-              Pexels und brauchen das nicht; fällt dieses eine Bild weg, kann
-              der ganze Absatz mit.
-
-              Die beiden Links führen nach aussen, laden aber nichts nach. Die
-              Regel «keine Fremdanfragen zur Laufzeit» bleibt unberührt. */}
-          <p className="mt-4 text-xs leading-relaxed">
-            Foto «Döner Box»:{" "}
-            <a
-              href="https://www.flickr.com/photos/49814345@N04/54446966205"
-              rel="noopener noreferrer"
-              target="_blank"
-              className="underline underline-offset-2 transition-colors duration-200 hover:text-primary"
-            >
-              Christian Frank
-            </a>
-            ,{" "}
-            <a
-              href="https://creativecommons.org/licenses/by/2.0/"
-              rel="noopener noreferrer license"
-              target="_blank"
-              className="underline underline-offset-2 transition-colors duration-200 hover:text-primary"
-            >
-              CC BY 2.0
-            </a>
-            , bearbeitet (Ausschnitt und Farbe).
-          </p>
         </div>
       </div>
     </footer>

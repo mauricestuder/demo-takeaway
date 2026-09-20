@@ -2,7 +2,7 @@
   "name": "demo-takeaway",
   "version": "1.0.0",
   "private": true,
-  "description": "Beispiel-Website für einen erfundenen Take-away (Sesam, Liestal)",
+  "description": "Beispiel-Website für ein erfundenes Steakhouse (Firestone, Liestal)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

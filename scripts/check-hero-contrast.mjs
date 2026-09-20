@@ -11,42 +11,52 @@
  * zeigt.
  *
  * Mitgemessen wird die Kopfzeile: Sie liegt im ungescrollten Zustand ohne
- * eigenen Hintergrund ueber demselben Foto. Sobald der weisse Balken
- * erscheint, gilt sie nicht mehr — dann steht die Schrift auf Weiss.
+ * eigenen Hintergrund ueber demselben Foto. Sobald der dunkle Balken
+ * erscheint, gilt sie nicht mehr — dann steht die Schrift auf dem Seitengrund.
  *
  * Aufruf:  node scripts/check-hero-contrast.mjs
  */
 import sharp from "sharp";
 
 const BILD = "public/images/hero-hintergrund.webp";
-const OV = [38, 24, 20];
+const OV = [16, 14, 12];
 
-// Zwei Fälle, weil Hero.tsx zwei Verläufe setzt. Abmessungen und Textkästen
-// im Browser abgelesen (1280 px bzw. 375 px Fensterbreite).
+// Creme (--color-foreground), Gold (--color-primary), gedämpftes Creme
+// (--color-foreground-soft) und Gold als Schrift (--color-primary-text).
+const CREME = [241, 232, 216];
+const GOLD = [212, 175, 90];
+const CREME_SOFT = [215, 202, 181];
+const GOLD_TEXT = [217, 184, 102];
+
+// Ein senkrechter Verlauf für beide Breiten (Hero.tsx). Abmessungen und
+// Textkästen im Browser abgelesen (1280 px bzw. 375 px Fensterbreite);
+// die Breite der Überschriftzeilen ist die Breite des Worts, nicht des
+// Blocks.
+const STOPS = [[0, 0.6], [0.3, 0.5], [0.72, 0.88], [1, 1]];
 const FAELLE = [
   {
-    titel: "Desktop 1280 px — waagrechter Verlauf",
-    W: 1265, H: 661, WINKEL: 96,
-    STOPS: [[0, 0.66], [0.44, 0.60], [1, 0.38]],
+    titel: "Desktop 1280 px",
+    W: 1280, H: 933, WINKEL: 180, STOPS,
     BOXEN: [
-      { name: "Wortmarke (20px, fett)", x: 83, y: 26,  w: 60,  h: 28,  fg: [254,242,242], ziel: 3   },
-      { name: "Navigation (16px)",      x: 263, y: 30, w: 573, h: 20,  fg: [254,242,242], ziel: 4.5 },
-      { name: "Eyebrow (12px)",     x: 41, y: 133, w: 268, h: 19,  fg: [254,242,242], ziel: 4.5 },
-      { name: "Überschrift (84px)", x: 41, y: 183, w: 568, h: 82,  fg: [254,242,242], ziel: 3   },
-      { name: "Akzentzeile (84px)", x: 41, y: 336, w: 484, h: 103, fg: [254,202,202], ziel: 3   },
-      { name: "Fliesstext (18px)",  x: 41, y: 454, w: 568, h: 58,  fg: [254,242,242], ziel: 4.5 },
+      { name: "Wortmarke (18px)",     x: 91,  y: 26,  w: 110, h: 28,  fg: CREME,      ziel: 3   },
+      { name: "Navigation (13px)",    x: 217, y: 30,  w: 668, h: 20,  fg: CREME,      ziel: 4.5 },
+      { name: "Eyebrow (12px)",       x: 41,  y: 134, w: 242, h: 19,  fg: GOLD_TEXT,  ziel: 4.5 },
+      { name: "Überschrift (120px)",  x: 41,  y: 184, w: 460, h: 230, fg: CREME,      ziel: 3   },
+      { name: "Akzentzeile (120px)",  x: 41,  y: 414, w: 460, h: 115, fg: GOLD,       ziel: 3   },
+      { name: "Fliesstext (18px)",    x: 41,  y: 558, w: 681, h: 58,  fg: CREME_SOFT, ziel: 4.5 },
+      { name: "Infozeile (15px)",     x: 41,  y: 739, w: 768, h: 98,  fg: CREME,      ziel: 4.5 },
     ],
   },
   {
-    titel: "Handy 375 px — senkrechter Verlauf",
-    W: 375, H: 1027, WINKEL: 180,
-    STOPS: [[0, 0.64], [1, 0.58]],
+    titel: "Handy 375 px",
+    W: 375, H: 911, WINKEL: 180, STOPS,
     BOXEN: [
-      { name: "Wortmarke (20px, fett)", x: 70, y: 22, w: 60, h: 28, fg: [254,242,242], ziel: 3   },
-      { name: "Eyebrow (12px)",     x: 20, y: 118, w: 268, h: 19, fg: [254,242,242], ziel: 4.5 },
-      { name: "Überschrift (44px)", x: 20, y: 206, w: 335, h: 43, fg: [254,242,242], ziel: 3   },
-      { name: "Akzentzeile (44px)", x: 20, y: 286, w: 254, h: 54, fg: [254,202,202], ziel: 3   },
-      { name: "Fliesstext (17px)",  x: 20, y: 359, w: 335, h: 77, fg: [254,242,242], ziel: 4.5 },
+      { name: "Wortmarke (18px)",     x: 70, y: 22,  w: 110, h: 28,  fg: CREME,      ziel: 3   },
+      { name: "Eyebrow (12px)",       x: 20, y: 120, w: 242, h: 19,  fg: GOLD_TEXT,  ziel: 4.5 },
+      { name: "Überschrift (41px)",   x: 20, y: 207, w: 170, h: 100, fg: CREME,      ziel: 3   },
+      { name: "Akzentzeile (41px)",   x: 20, y: 307, w: 170, h: 50,  fg: GOLD,       ziel: 3   },
+      { name: "Fliesstext (17px)",    x: 20, y: 385, w: 335, h: 77,  fg: CREME_SOFT, ziel: 4.5 },
+      { name: "Infozeile (15px)",     x: 20, y: 646, w: 335, h: 209, fg: CREME,      ziel: 4.5 },
     ],
   },
 ];

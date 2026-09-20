@@ -12,10 +12,10 @@ function Row({ items }: TickerProps) {
     <div className="flex shrink-0 items-center gap-7 pr-7">
       {items.map((item, index) => (
         <span key={`${item}-${index}`} className="flex items-center gap-7">
-          <span className="font-display text-lg font-bold text-on-primary sm:text-xl">
+          <span className="font-display text-base font-medium uppercase tracking-[0.2em] text-primary-text sm:text-lg">
             {item}
           </span>
-          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-on-primary/60" />
+          <span className="h-1 w-1 shrink-0 rotate-45 bg-primary/60" />
         </span>
       ))}
     </div>
@@ -53,7 +53,7 @@ export function Ticker({ items }: TickerProps) {
   }, []);
 
   return (
-    <div className="group relative flex bg-primary">
+    <div className="group relative flex border-y border-border bg-surface-warm">
       <div aria-hidden="true" className="flex select-none overflow-hidden py-3.5">
         <div
           className="animate-ticker flex w-max"
@@ -70,7 +70,7 @@ export function Ticker({ items }: TickerProps) {
           onClick={() => setPaused((value) => !value)}
           aria-pressed={paused}
           aria-label={paused ? "Laufband fortsetzen" : "Laufband anhalten"}
-          className="absolute right-1 top-1/2 grid h-11 w-11 -translate-y-1/2 cursor-pointer place-items-center rounded-full text-on-primary/70 transition-colors duration-200 hover:bg-on-primary/15 hover:text-on-primary focus-visible:bg-on-primary/15 focus-visible:text-on-primary"
+          className="absolute right-1 top-1/2 grid h-11 w-11 -translate-y-1/2 cursor-pointer place-items-center rounded-sm text-primary-text/70 transition-colors duration-200 hover:bg-primary/15 hover:text-primary-text focus-visible:bg-primary/15 focus-visible:text-primary-text"
         >
           <Icon name={paused ? "play" : "pause"} size={18} filled />
         </button>

@@ -40,10 +40,10 @@ Ein Gericht sieht so aus:
 
 ```json
 {
-  "id": "doener-klassik",
-  "name": "Döner Klassik",
-  "description": "Kalbfleisch, Salat, Hausdressing im Steinofenbrot.",
-  "price": 12.5,
+  "id": "entrecote",
+  "name": "Entrecôte",
+  "description": "Das klassische Steak mit dem Fettrand — kräftig im Geschmack, zart im Biss.",
+  "price": 49,
   "badges": ["beliebt"],
   "featured": true,
   "available": true,
@@ -56,7 +56,7 @@ Ein Gericht sieht so aus:
 | `id` | Eindeutiges Kürzel. Einmal vergeben, nicht mehr ändern. |
 | `name` | Name auf der Karte |
 | `description` | Ein Satz mit den Zutaten. Darf auch leer bleiben (`""`). |
-| `price` | Zahl mit Punkt, also `12.5` für 12.50. `null` zeigt „auf Anfrage“. |
+| `price` | Zahl mit Punkt, also `49.5` für 49.50. `null` zeigt „auf Anfrage“. |
 | `badges` | Kennzeichnungen. Erlaubt: `vegetarisch`, `vegan`, `scharf`, `neu`, `beliebt`, `hausgemacht` |
 | `featured` | `true` = das Gericht erscheint zusätzlich gross unter „Empfehlungen“ |
 | `available` | `false` blendet das Gericht aus, ohne es zu löschen (z. B. saisonal) |
@@ -146,13 +146,13 @@ Solange kein Bild hinterlegt ist, zeichnet die Website einen gestalteten
 Platzhalter im exakt richtigen Seitenverhältnis. Echte Fotos ersetzen ihn ohne
 jede Layout-Änderung.
 
-1. Foto in den Ordner `public/images/` legen (z. B. `doener-teller.jpg`)
+1. Foto in den Ordner `public/images/` legen (z. B. `filet.jpg`)
 2. In der JSON-Datei eintragen:
 
 ```json
 "image": {
-  "src": "/images/doener-teller.jpg",
-  "alt": "Döner Teller mit Reis und Salat"
+  "src": "/images/filet.jpg",
+  "alt": "Rindsfilet auf dunklem Teller"
 }
 ```
 

@@ -65,7 +65,7 @@ export interface SocialLink {
 }
 
 export interface Seo {
-  /** Absolute Basis-URL der Live-Seite, z. B. "https://sesam-liestal.ch". */
+  /** Absolute Basis-URL der Live-Seite, z. B. "https://firestone-liestal.ch". */
   siteUrl: string;
   title: string;
   titleTemplate: string;

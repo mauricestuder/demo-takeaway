@@ -1,10 +1,15 @@
-# Sesam — Beispiel-Website für einen Take-away
+# Firestone — Beispiel-Website für ein Steakhouse
 
 Beispielseite für die Projektarbeit von Maurice Studer (Sek Frenke, Liestal):
-So könnte die Website eines kleinen Betriebs aussehen. **«Sesam» ist
-erfunden** — Name, Adresse (Musterstrasse 12), Telefonnummer, Speisekarte und
-Familie Demir sind ausgedacht. Die Fotos sind Platzhalter von Pexels (Nachweis
-in [`public/images/BILDNACHWEIS.txt`](./public/images/BILDNACHWEIS.txt)).
+So könnte die Website eines Restaurants aussehen. **«Firestone» ist
+erfunden** — Name, Adresse (Musterstrasse 12), Telefonnummer, Speisekarte,
+Weinkarte und die Familie Brenner sind ausgedacht. Die Fotos sind Platzhalter
+von Pexels (Nachweis in
+[`public/images/BILDNACHWEIS.txt`](./public/images/BILDNACHWEIS.txt)).
+
+Gestaltung: dunkel und gold (Playfair Display + Inter), Foto über die volle
+Höhe, Reservation per Telefon als Hauptaktion. Alle Farben liegen als Tokens
+in `src/app/globals.css`.
 
 Die Seite trägt deshalb oben einen Hinweis «Beispielseite» (`demoMode` in
 `content/site.json`) und ist für Suchmaschinen gesperrt.
@@ -34,7 +39,8 @@ Dann <http://localhost:3000> öffnen.
 | `npm run build` | Produktions-Build |
 | `npm run typecheck` | TypeScript prüfen |
 | `npm run check:hours` | Selbsttest der Öffnungszeiten-Logik |
-| `npm run build:map` | Kartenbild neu erzeugen (Koordinaten im Skript) |
+| `npm run build:map` | Kartenbild aus OpenStreetMap-Daten zeichnen (Koordinaten im Skript) |
+| `npm run check:hero` | Kontrast der Schrift über dem Hero-Foto nachmessen |
 | `npm run build:icons` | Tab-Symbole aus `public/icon.svg` erzeugen |
 
 ## Inhalte ändern
@@ -46,7 +52,7 @@ Anleitung in [`content/README.md`](./content/README.md).
 content/
 ├── site.json      Name, Adresse, Kontakt, SEO, Beispiel-Hinweis
 ├── pages.json     Texte der Startseite (Hero, Gründe, Über uns, Besuch, Footer)
-├── menu.json      Speisekarte
+├── menu.json      Speisekarte inkl. Weinkarte
 ├── hours.json     Öffnungszeiten
 ├── reviews.json   Drei Aussagen über den Betrieb (keine erfundenen Zitate, keine Note)
 └── legal.json     Impressum und Datenschutz

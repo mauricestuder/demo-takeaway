@@ -15,8 +15,8 @@ const TONES: Record<AccentTone, { tile: string; pill: string }> = {
     pill: "border-primary/30 bg-primary/10 text-primary-text",
   },
   accent: {
-    tile: "bg-accent/12 text-accent-text",
-    pill: "border-accent/35 bg-accent/10 text-accent-text",
+    tile: "bg-accent/12 text-primary-text",
+    pill: "border-accent/35 bg-accent/10 text-primary-text",
   },
   success: {
     tile: "bg-success/10 text-success-text",
@@ -25,7 +25,7 @@ const TONES: Record<AccentTone, { tile: string; pill: string }> = {
 };
 
 /**
- * „Warum Sesam".
+ * „Warum Firestone".
  *
  * Ab 640 px exakt wie ursprünglich: Icon über der Überschrift, grosszügige
  * Karten, zwei bzw. drei Spalten.
@@ -64,12 +64,12 @@ export function Highlights({ content }: { content: HighlightsContent }) {
                   isLastOdd ? "sm:col-span-2 lg:col-span-1" : undefined
                 }
               >
-                <article className="card flex h-full flex-col border-2 p-4 transition-colors duration-200 hover:border-primary sm:p-7">
+                <article className="card flex h-full flex-col border p-4 transition-colors duration-200 hover:border-primary sm:p-7">
                   {/* Auf dem Handy eine Zeile (Icon neben Titel), ab 640 px
                       wieder normaler Blockfluss: Icon oben, Titel darunter. */}
                   <div className="flex items-center gap-3 sm:block">
                     <span
-                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg sm:h-14 sm:w-14 sm:rounded-xl ${tone.tile}`}
+                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-sm sm:h-14 sm:w-14 sm:rounded-sm ${tone.tile}`}
                     >
                       <Icon name={item.icon} size={22} />
                     </span>
@@ -102,7 +102,7 @@ export function Highlights({ content }: { content: HighlightsContent }) {
                   {item.fact && (
                     <div className="mt-auto pt-4 sm:pt-6">
                       <span
-                        className={`inline-flex rounded-full border px-3 py-1.5 text-[0.6875rem] font-bold uppercase tracking-[0.1em] ${tone.pill}`}
+                        className={`inline-flex rounded-sm border px-3 py-1.5 text-[0.6875rem] font-bold uppercase tracking-[0.1em] ${tone.pill}`}
                       >
                         {item.fact}
                       </span>

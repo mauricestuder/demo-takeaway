@@ -3,50 +3,48 @@
 /* ================================================================== */
 /*  Design-Tokens                                                      */
 /*                                                                     */
-/*  Palette und Typografie stammen aus der UI/UX-Pro-Max-Datenbank,    */
-/*  Kategorie "Restaurant/Food Service" bzw. Font-Pairing              */
-/*  "Restaurant Menu". Wer die Seite umfärben will, ändert nur diesen  */
-/*  Block — alle Komponenten lesen ausschliesslich diese Variablen.    */
+/*  Dunkle Steakhouse-Palette (Schwarz, Gold, Creme). Wer die Seite   */
+/*  umfärben will, ändert nur diesen Block — alle Komponenten lesen    */
+/*  ausschliesslich diese Variablen.                                   */
 /* ================================================================== */
 
 @theme {
   /* --- Semantische Farbrollen ---------------------------------- */
-  --color-primary: #dc2626; /* Appetitliches Rot, Hauptakzent   */
-  --color-on-primary: #ffffff;
-  --color-primary-hover: #b91c1c; /* Bewusst dunkler: Hover ohne Textkontrast-Verlust */
-  /* Rot als Textfarbe auf hellem Grund. Das Palettenrot erreicht bei 17 px
-     nur 4.41:1 — diese Stufe liegt bei 6:1 und bleibt farblich identisch. */
-  --color-primary-text: #b21616;
-  --color-secondary: #f87171;
-  /* Warm statt kühlem Slate: passt zur übrigen Palette, 5.84:1 auf Secondary. */
-  --color-on-secondary: #450a0a;
-  --color-accent: #a16207; /* Warmes Gold, zweiter Akzent      */
+  /* Dunkel und Gold: fast schwarzer, warmer Grund, Messing als Hauptakzent,
+     Creme fuer die Schrift. Alle Text-Farben liegen auf ihrem Grund ueber
+     4.5:1 — Gold #d4af5a auf #100e0c erreicht 9.7:1, Creme 15:1. */
+  --color-primary: #d4af5a; /* Messing-Gold, Hauptakzent            */
+  --color-on-primary: #14110d;
+  --color-primary-hover: #e6c476; /* Heller statt dunkler: auf Dunkel faellt Hover so auf */
+  --color-primary-text: #d9b866; /* Gold als Schrift auf dunklem Grund   */
+  --color-secondary: #2a241f;
+  --color-on-secondary: #f1e8d8;
+  --color-accent: #b8552f; /* Glut-Kupfer, zweiter Akzent          */
   --color-on-accent: #ffffff;
-  /* Dunklere Goldvariante für kleine Texte. Das Gold der Palette liegt bei
-     11–12 px genau auf der 4.5:1-Grenze; diese Stufe schafft Luft. */
-  --color-accent-text: #7c4a05;
+  /* Kupfer als Schrift muss auf Dunkel heller sein als die Flaechenfarbe:
+     #b8552f erreicht auf #100e0c nur 3.9:1, diese Stufe 6.1:1. */
+  --color-accent-text: #e2895f;
 
-  --color-background: #fef2f2;
-  --color-foreground: #450a0a;
-  --color-card: #ffffff;
-  --color-card-foreground: #450a0a;
-  --color-muted: #f0edf1;
-  --color-muted-foreground: #475569;
-  --color-border: #fecaca;
-  --color-destructive: #dc2626;
+  --color-background: #100e0c;
+  --color-foreground: #f1e8d8;
+  --color-card: #1a1613;
+  --color-card-foreground: #f1e8d8;
+  --color-muted: #262019;
+  --color-muted-foreground: #b3a48f; /* 7.6:1 auf Grund, 6.4:1 auf Karte */
+  --color-border: #3a3129;
+  --color-destructive: #c0392b;
   --color-on-destructive: #ffffff;
-  --color-ring: #dc2626;
+  --color-ring: #d4af5a;
 
-  /* --- shadcn/ui-Kompatibilität ---------------------------------
+  /* --- shadcn/ui-Kompatibilitaet ---------------------------------
      Dieses Projekt benennt Vordergrundfarben `on-*` (on-primary),
      shadcn/ui benennt sie `*-foreground` (primary-foreground).
-     Ohne diese Brücke erzeugen shadcn-Komponenten Klassen wie
-     `text-primary-foreground` oder `border-input`, für die Tailwind
+     Ohne diese Bruecke erzeugen shadcn-Komponenten Klassen wie
+     `text-primary-foreground` oder `border-input`, fuer die Tailwind
      keinen Wert findet — die Schrift bliebe dann unsichtbar.
 
-     Es sind Verweise, keine Kopien: Wer oben eine Farbe ändert,
-     ändert sie hier automatisch mit. Dadurch lässt sich jede
-     shadcn-Komponente ohne Anpassung einsetzen. */
+     Es sind Verweise, keine Kopien: Wer oben eine Farbe aendert,
+     aendert sie hier automatisch mit. */
   --color-primary-foreground: var(--color-on-primary);
   --color-secondary-foreground: var(--color-on-secondary);
   --color-accent-foreground: var(--color-on-accent);
@@ -55,26 +53,25 @@
   --color-popover-foreground: var(--color-card-foreground);
   --color-input: var(--color-border);
 
-  /* Zusätzliche Abstufungen, aus der Palette abgeleitet */
-  --color-surface-warm: #fff7f5;
-  --color-foreground-soft: #7c2d2d;
-  --color-success: #15803d;
-  /* Dunklere Stufe für kleine Schrift: #15803d erreicht auf der hellen
-     Grünfläche der Pillen nur 4.38:1, diese hier 6.3:1. */
-  --color-success-text: #166534;
-  /* Das Palettengold auf dunklem Grund nur 3.2:1 — diese hellere Stufe
-     derselben Farbe erreicht 8.2:1 auf #450a0a. */
-  --color-accent-on-dark: #e8b04b;
+  /* Zusaetzliche Abstufungen, aus der Palette abgeleitet */
+  --color-surface-warm: #151210; /* Eine Stufe heller als der Grund, fuer den Sektionswechsel */
+  --color-foreground-soft: #d7cab5;
+  --color-success: #7cc48a;
+  --color-success-text: #9ad4a6;
+  --color-accent-on-dark: #e6c476;
 
   /* --- Schriften ------------------------------------------------ */
-  /* Fraunces für Überschriften, Karla für Fliesstext. Fraunces bewusst statt
-     einer Didone wie Playfair: geringer Strichkontrast, dadurch auch bei
-     15 px auf dem Handy noch klar lesbar. */
+  /* Playfair Display fuer Ueberschriften, Inter fuer Fliesstext: die
+     klassische Steakhouse-Karte — hoher Strichkontrast oben, neutrale
+     Groteske darunter. Playfair wird nirgends unter 17 px gesetzt, damit
+     die Haarstriche auf dem Handy nicht verwaschen. */
   --font-display: var(--font-display-family), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-karla), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-sans-family), "Helvetica Neue", Arial, sans-serif;
 
   /* --- Radien und Bewegung -------------------------------------- */
-  --radius-card: 1rem;
+  /* Kaum gerundet: Pillen und weiche Ecken wirken verspielt, eine
+     Steakhouse-Karte hat Kanten. */
+  --radius-card: 0.25rem;
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -92,7 +89,7 @@
        Blöcken. Mehr las sich dort als Loch, nicht als Gliederung. */
     --section-space: 2.5rem;
 
-    color-scheme: light;
+    color-scheme: dark;
   }
 
   @media (min-width: 48rem) {
@@ -138,9 +135,9 @@
   h4 {
     font-family: var(--font-display);
     color: var(--color-foreground);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.06;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     text-wrap: balance;
   }
 
@@ -190,11 +187,10 @@
     gap: 0.625rem;
     font-family: var(--font-sans);
     font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
+    font-weight: 600;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    /* Dunkleres Gold: bei 12 px deutlich über 4.5:1 */
-    color: var(--color-accent-text);
+    color: var(--color-primary-text);
   }
 
   .eyebrow::before {
@@ -240,11 +236,13 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.875rem 1.5rem;
-    border-radius: 999px;
+    padding: 0.875rem 1.75rem;
+    border-radius: 2px;
     font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     line-height: 1;
     white-space: nowrap;
     cursor: pointer;
@@ -262,13 +260,13 @@
   .btn-primary {
     background: var(--color-primary);
     color: var(--color-on-primary);
-    box-shadow: 0 6px 18px -8px rgb(220 38 38 / 0.55);
+    box-shadow: 0 6px 18px -8px rgb(212 175 90 / 0.55);
   }
 
   .btn-secondary {
-    background: var(--color-card);
+    background: transparent;
     color: var(--color-foreground);
-    border: 2px solid var(--color-foreground);
+    border: 1px solid var(--color-primary);
   }
 
   .btn-quiet {
@@ -282,12 +280,12 @@
   @media (hover: hover) {
     .btn-primary:hover {
       background: var(--color-primary-hover);
-      box-shadow: 0 10px 24px -8px rgb(185 28 28 / 0.6);
+      box-shadow: 0 10px 24px -8px rgb(230 196 118 / 0.6);
     }
 
     .btn-secondary:hover {
-      background: var(--color-foreground);
-      color: var(--color-background);
+      background: var(--color-primary);
+      color: var(--color-on-primary);
     }
 
     .btn-quiet:hover {
@@ -303,7 +301,7 @@
   /* --- Trennlinie ------------------------------------------------ */
 
   .rule {
-    height: 2px;
+    height: 1px;
     background: var(--color-border);
     border-radius: 2px;
   }

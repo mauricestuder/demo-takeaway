@@ -1,14 +1,14 @@
 {
-  "name": "Sesam",
-  "legalName": "Sesam Take Away GmbH",
-  "tagline": "Kebab & Take Away",
+  "name": "Firestone",
+  "legalName": "Firestone Steakhouse GmbH",
+  "tagline": "Steakhouse & Grill",
   "locality": "Liestal",
-  "priceRange": "CHF",
+  "priceRange": "CHF CHF CHF",
   "cuisine": [
-    "Kebab",
-    "Türkisch",
-    "Pizza",
-    "Street Food"
+    "Steakhouse",
+    "Grill",
+    "Schweizer Rind",
+    "Weine"
   ],
   "address": {
     "street": "Musterstrasse 12",
@@ -17,7 +17,7 @@
     "region": "Basel-Landschaft",
     "country": "Schweiz",
     "countryCode": "CH",
-    "hint": "Mitten in der Altstadt, zwei Minuten vom Bahnhof.",
+    "hint": "In der Altstadt, zwei Minuten vom Bahnhof.",
     "mapsQuery": "Liestal",
     "geo": null
   },
@@ -30,26 +30,26 @@
   "social": [],
   "seo": {
     "siteUrl": "https://example.ch",
-    "title": "Sesam – Kebab & Take Away in Liestal",
-    "titleTemplate": "%s | Sesam Liestal",
-    "description": "Kebab, Dürüm, Pide und Pizza mitten in Liestal. Zum Mitnehmen oder vor Ort – Beispielseite eines erfundenen Betriebs.",
+    "title": "Firestone – Steakhouse & Grill in Liestal",
+    "titleTemplate": "%s | Firestone Liestal",
+    "description": "Dry-Aged-Steaks vom Holzkohlegrill mitten in Liestal. Tisch per Telefon reservieren – Beispielseite eines erfundenen Betriebs.",
     "keywords": [
-      "Kebab Liestal",
-      "Döner Liestal",
-      "Take Away Liestal",
-      "Dürüm Liestal",
-      "Pizza Liestal"
+      "Steakhouse Liestal",
+      "Steak Liestal",
+      "Grill Liestal",
+      "Dry Aged Baselland",
+      "Restaurant Liestal"
     ],
-    "ogImageAlt": "Sesam – Kebab & Take Away in Liestal"
+    "ogImageAlt": "Firestone – Steakhouse & Grill in Liestal"
   },
   "facts": {
-    "seating": "Sitzplätze drinnen und draussen",
-    "takeaway": "Zum Mitnehmen",
+    "seating": "60 Plätze drinnen, 20 im Hof",
+    "takeaway": "Reservation empfohlen",
     "accessibility": "Rollstuhlgängig",
     "payment": "Bar, Karte und Twint",
     "parking": "Parkhaus in 100 m",
     "station": "Zwei Minuten vom Bahnhof"
   },
   "demoMode": true,
-  "demoNotice": "Beispielseite: «Sesam» ist ein erfundener Betrieb. So könnte Ihre Website aussehen – gebaut von Maurice Studer, Ramlinsburg, im Rahmen einer Projektarbeit."
+  "demoNotice": "Beispielseite: «Firestone» ist ein erfundener Betrieb. So könnte Ihre Website aussehen – gebaut von Maurice Studer, Ramlinsburg, im Rahmen einer Projektarbeit."
 }

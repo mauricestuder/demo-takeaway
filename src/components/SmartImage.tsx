@@ -93,7 +93,7 @@ function Placeholder({ label }: { label: string }) {
           <circle cx="8.5" cy="10" r="1.6" />
           <path d="m3.5 17 4.8-4.4a2 2 0 0 1 2.7 0l3.2 3 2-1.8a2 2 0 0 1 2.7 0l1.6 1.5" />
         </svg>
-        <span className="text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+        <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
           {label}
         </span>
       </div>

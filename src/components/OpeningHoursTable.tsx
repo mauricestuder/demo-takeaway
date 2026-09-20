@@ -30,7 +30,7 @@ export function OpeningHoursTable({ hours }: { hours: OpeningHours }) {
           return (
             <li
               key={day.key}
-              className={`flex items-center justify-between gap-4 rounded-lg px-3 py-3 transition-colors duration-300 ${
+              className={`flex items-center justify-between gap-4 rounded-sm px-3 py-3 transition-colors duration-300 ${
                 isToday ? "bg-primary/[0.08]" : ""
               }`}
             >
@@ -39,7 +39,7 @@ export function OpeningHoursTable({ hours }: { hours: OpeningHours }) {
                   {day.label}
                 </span>
                 {isToday && (
-                  <span className="rounded-full bg-primary px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-[0.1em] text-on-primary">
+                  <span className="rounded-sm bg-primary px-2 py-0.5 text-[0.625rem] font-bold uppercase tracking-[0.1em] text-on-primary">
                     Heute
                   </span>
                 )}

@@ -1,29 +1,29 @@
 {
-  "eyebrow": "Bewertungen",
-  "title": "Was Gäste zurückmelden",
-  "intro": "Drei Dinge, die uns Gäste am häufigsten sagen.",
+  "eyebrow": "Stimmen",
+  "title": "Was Gäste sagen",
+  "intro": "Drei Dinge, die uns Gäste am häufigsten zurückmelden.",
   "rating": null,
   "themes": [
     {
       "id": "r1",
-      "icon": "leaf",
-      "label": "Frisches Gemüse",
-      "text": "Salat, Tomaten und Zwiebeln schneiden wir mehrmals am Tag frisch. Sie stecken in jedem Kebab, im Dürüm und im Taschenbrot — und wer nur das möchte, findet drei Salate als eigene Gerichte auf der Karte.",
-      "textShort": "Gemüse mehrmals täglich frisch geschnitten. Drei Salate gibt es auch als eigene Gerichte."
+      "icon": "flame",
+      "label": "Der Gargrad stimmt",
+      "text": "Medium rare heisst bei uns medium rare. Jedes Steak ruht nach dem Grill fünf Minuten auf dem warmen Brett, bevor es an den Tisch geht — und wer unsicher ist, fragt: Wir schneiden gern an.",
+      "textShort": "Medium rare heisst medium rare. Jedes Steak ruht fünf Minuten, bevor es an den Tisch geht."
     },
     {
       "id": "r2",
-      "icon": "flame",
-      "label": "Eigenes Brot",
-      "text": "Das Fladenbrot kommt aus dem eigenen Ofen, nicht aus der Tiefkühltruhe. Es ist die Grundlage von Döner, Dürüm und Pide — und noch warm, wenn es über den Tresen geht.",
-      "textShort": "Fladenbrot aus dem eigenen Ofen, noch warm über den Tresen."
+      "icon": "sparkle",
+      "label": "Das Fleisch",
+      "text": "Schweizer Rind von drei Höfen im Baselbiet, 28 Tage am Knochen gereift im eigenen Reifeschrank. Man sieht ihn vom Eingang aus — und man schmeckt den Unterschied.",
+      "textShort": "Schweizer Rind aus dem Baselbiet, 28 Tage im eigenen Reifeschrank gereift."
     },
     {
       "id": "r3",
-      "icon": "clock",
-      "label": "Schnell am Mittag",
-      "text": "Zwischen zwölf und eins ist bei uns am meisten los — und trotzdem wartet kaum jemand länger als fünf Minuten. Wer vorbestellt, gar nicht.",
-      "textShort": "Auch am Mittag selten mehr als fünf Minuten Wartezeit. Vorbestellt: keine."
+      "icon": "hand",
+      "label": "Der Service",
+      "text": "Wer reserviert, sitzt. Wer eine Weinempfehlung möchte, bekommt eine, die zum Steak passt — nicht die teuerste. Und wer es eilig hat, sagt es beim Bestellen.",
+      "textShort": "Wer reserviert, sitzt. Weinempfehlung passend zum Steak, nicht die teuerste."
     }
   ],
   "quotes": [],

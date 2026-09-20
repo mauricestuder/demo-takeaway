@@ -36,7 +36,7 @@ export function Reviews({ content }: { content: ReviewsContent }) {
                Fläche. */
             <div
               data-reveal
-              className="card border-2 p-4 sm:p-6 lg:col-span-4 lg:self-start lg:p-7"
+              className="card border p-4 sm:p-6 lg:col-span-4 lg:self-start lg:p-7"
             >
               <div className="flex flex-wrap items-center gap-x-5 gap-y-3 lg:block">
                 <p className="flex items-baseline gap-1.5 lg:gap-2">
@@ -97,11 +97,11 @@ export function Reviews({ content }: { content: ReviewsContent }) {
                   isLastOdd ? "sm:col-span-1" : undefined
                 }
               >
-                <article className="card flex h-full flex-col border-2 p-4 sm:p-6">
+                <article className="card flex h-full flex-col border p-4 sm:p-6">
                   {/* Wie bei den Gründen: auf dem Handy eine Zeile,
                       ab 640 px Icon oben und Titel darunter. */}
                   <div className="flex items-center gap-2.5 sm:block">
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent sm:h-12 sm:w-12 sm:rounded-xl">
+                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-accent/10 text-accent sm:h-12 sm:w-12 sm:rounded-sm">
                       <Icon name={theme.icon} size={22} />
                     </span>
                     <h3 className="min-w-0 break-words font-display text-[0.9375rem] leading-tight hyphens-auto sm:mt-5 sm:text-xl sm:leading-[1.06]">
@@ -136,7 +136,7 @@ export function Reviews({ content }: { content: ReviewsContent }) {
           <ul className="mt-3 grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             {content.quotes.map((quote) => (
               <li key={quote.id} data-reveal>
-                <figure className="card flex h-full flex-col border-2 p-4 sm:p-6">
+                <figure className="card flex h-full flex-col border p-4 sm:p-6">
                   <div
                     className="flex gap-0.5 text-accent"
                     role="img"

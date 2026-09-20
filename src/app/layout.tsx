@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Karla } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 
@@ -10,27 +10,24 @@ import { assetPath } from "@/lib/assets";
 import { getHours, getPages, getSite } from "@/lib/content";
 
 /**
- * Schriftpaar: Fraunces für Überschriften, Karla für Fliesstext. Beide werden
- * von next/font beim Build heruntergeladen und selbst ausgeliefert — kein
- * externer Font-Request zur Laufzeit, das spart Ladezeit und Cookie-Fragen.
+ * Schriftpaar: Playfair Display für Überschriften, Inter für Fliesstext. Beide
+ * werden von next/font beim Build heruntergeladen und selbst ausgeliefert —
+ * kein externer Font-Request zur Laufzeit, das spart Ladezeit und Cookie-Fragen.
  *
- * Vorher stand hier Playfair Display SC. Die Schrift sieht gross gesetzt
- * prächtig aus, hat aber sehr dünne Haarstriche: Bei den 15 px, mit denen
- * Gerichtnamen und Kartentitel auf dem Handy gesetzt sind, fallen die unter
- * einen Pixel und verwaschen zu Grau. Fraunces hat deutlich weniger
- * Strichkontrast, bleibt dadurch auch klein lesbar und behält trotzdem
- * Charakter — sie ist warm und passt zu Street Food.
+ * Playfair hat sehr dünne Haarstriche und verwäscht unter rund 16 px. Die
+ * Seite setzt sie deshalb nur für Überschriften und Gerichtnamen ab 17 px;
+ * alles Kleine läuft in Inter.
  */
-const fraunces = Fraunces({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display-family",
 });
 
-const karla = Karla({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-karla",
+  variable: "--font-sans-family",
 });
 
 const isPreviewDeployment = process.env.GITHUB_PAGES === "true";
@@ -91,8 +88,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#fef2f2",
-  colorScheme: "light",
+  themeColor: "#100e0c",
+  colorScheme: "dark",
 };
 
 export default async function RootLayout({
@@ -103,7 +100,7 @@ export default async function RootLayout({
   const [site, hours, pages] = await Promise.all([getSite(), getHours(), getPages()]);
 
   return (
-    <html lang="de-CH" className={`${fraunces.variable} ${karla.variable}`}>
+    <html lang="de-CH" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         {/* Ohne JavaScript bleiben alle Inhalte sichtbar. */}
         <noscript>
@@ -113,7 +110,7 @@ export default async function RootLayout({
       <body>
         <a
           href="#hauptinhalt"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-primary focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-on-primary"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-sm focus:bg-primary focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-on-primary"
         >
           Zum Inhalt springen
         </a>

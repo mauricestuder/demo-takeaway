@@ -62,7 +62,7 @@ export function MenuCategoryNav({ categories }: MenuCategoryNavProps) {
   // abgedunkelt war. Wer den Wert erhöht, holt den Fehler zurück.
   return (
     <div
-      className="sticky z-20 -mx-[var(--page-gutter)] border-y-2 border-border bg-background/95 px-[var(--page-gutter)] py-3 backdrop-blur-md"
+      className="sticky z-20 -mx-[var(--page-gutter)] border-y border-border bg-background/95 px-[var(--page-gutter)] py-3 backdrop-blur-md"
       style={{ top: "var(--header-height)" }}
     >
       <ul
@@ -77,7 +77,7 @@ export function MenuCategoryNav({ categories }: MenuCategoryNavProps) {
                 href={`#kategorie-${category.id}`}
                 data-category={category.id}
                 aria-current={isActive ? "true" : undefined}
-                className={`inline-flex min-h-11 items-center whitespace-nowrap rounded-full border-2 px-4 font-semibold transition-colors duration-200 ${
+                className={`inline-flex min-h-11 items-center whitespace-nowrap rounded-sm border px-4 font-semibold transition-colors duration-200 ${
                   isActive
                     ? "border-primary bg-primary text-on-primary"
                     : "border-border bg-card text-foreground hover:border-primary hover:text-primary"

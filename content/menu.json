@@ -1,72 +1,124 @@
 {
   "currency": "CHF",
-  "note": "Saucen zur Auswahl: Joghurt, Knoblauch, Cocktail und scharf — alle hausgemacht. Preise in Schweizer Franken, inklusive MwSt.",
+  "note": "Alle Steaks kommen mit Fleur de Sel, Kräuterbutter und Grillzitrone. Beilagen und Saucen werden separat bestellt. Preise in Schweizer Franken, inklusive MwSt.",
   "categories": [
     {
-      "id": "kebab",
-      "name": "Kebab & Dürüm",
-      "description": "Vom Drehspiess, mit frischem Salat und Sauce nach Wahl",
+      "id": "grill",
+      "name": "Vom Holzkohlegrill",
+      "description": "Schweizer Rind, 28 Tage am Knochen gereift — Gewicht vor dem Grillen",
       "items": [
         {
-          "id": "doener-kebab",
-          "name": "Döner Kebab",
-          "description": "Im hausgemachten Fladenbrot, mit Salat und Sauce.",
-          "price": 11.5,
-          "badges": ["beliebt"],
-          "featured": true,
-          "available": true,
-          "image": { "src": "/images/doener-kebab.webp", "alt": "Döner Kebab im Fladenbrot mit Salat" }
-        },
-        {
-          "id": "duerum-kebab",
-          "name": "Dürüm Kebab",
-          "description": "Im dünnen Fladenbrot gerollt, mit Salat und Sauce.",
-          "price": 12.5,
-          "badges": ["beliebt"],
-          "featured": true,
-          "available": true,
-          "image": { "src": "/images/duerum-kebab.webp", "alt": "Gerollter Dürüm Kebab" }
-        },
-        {
-          "id": "doener-box",
-          "name": "Döner Box",
-          "description": "Kebabfleisch auf Pommes, mit Salat und Sauce.",
-          "price": 10.5,
+          "id": "entrecote",
+          "name": "Entrecôte",
+          "description": "Das klassische Steak mit dem Fettrand — kräftig im Geschmack, zart im Biss.",
+          "price": 49,
           "variants": [
-            { "label": "Klein", "price": 10.5 },
-            { "label": "Gross", "price": 13 }
+            {
+              "label": "250 g",
+              "price": 49
+            },
+            {
+              "label": "350 g",
+              "price": 64
+            }
+          ],
+          "badges": [
+            "beliebt"
+          ],
+          "featured": true,
+          "available": true,
+          "image": {
+            "src": "/images/entrecote.webp",
+            "alt": "Gegrilltes Entrecôte auf Schieferplatte mit Grillgemüse"
+          }
+        },
+        {
+          "id": "ribeye",
+          "name": "Ribeye",
+          "description": "Stark marmoriert, aus der Hochrippe. Für alle, die es saftig mögen.",
+          "price": 58,
+          "variants": [
+            {
+              "label": "350 g",
+              "price": 58
+            },
+            {
+              "label": "450 g",
+              "price": 72
+            }
           ],
           "badges": [],
           "featured": true,
           "available": true,
-          "image": { "src": "/images/doener-box.webp", "alt": "Döner Box mit Pommes und Fleisch" }
+          "image": {
+            "src": "/images/ribeye.webp",
+            "alt": "Ribeye-Steak mit aufsteigendem Rauch auf heisser Platte"
+          }
         },
         {
-          "id": "doener-teller",
-          "name": "Döner Teller",
-          "description": "Mit Reis oder Pommes, Salat und Sauce.",
-          "price": 17.5,
+          "id": "filet",
+          "name": "Filet",
+          "description": "Das zarteste Stück vom Rind, mager und fein. Gegrillt, wie Sie es wünschen.",
+          "price": 62,
+          "variants": [
+            {
+              "label": "200 g",
+              "price": 62
+            },
+            {
+              "label": "300 g",
+              "price": 84
+            }
+          ],
+          "badges": [
+            "beliebt"
+          ],
+          "featured": true,
+          "available": true,
+          "image": {
+            "src": "/images/filet.webp",
+            "alt": "Rindsfilet auf dunklem Teller mit Kräutern"
+          }
+        },
+        {
+          "id": "tomahawk",
+          "name": "Tomahawk",
+          "description": "Ribeye am langen Knochen, rund ein Kilo — für zwei Personen, am Tisch aufgeschnitten.",
+          "price": 138,
           "badges": [],
           "featured": true,
           "available": true,
-          "image": { "src": "/images/doener-teller.webp", "alt": "Döner Teller mit Reis und Salat" }
+          "image": {
+            "src": "/images/tomahawk.webp",
+            "alt": "Gegrilltes Tomahawk-Steak auf Holzbrett"
+          }
         },
         {
-          "id": "duerum-poulet",
-          "name": "Dürüm Poulet",
-          "description": "Gerollt, mit Pouletfleisch vom Spiess, Salat und Sauce.",
-          "price": 12.5,
+          "id": "t-bone",
+          "name": "T-Bone",
+          "description": "Filet und Entrecôte am Knochen in einem Stück, 500 Gramm.",
+          "price": 72,
           "badges": [],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "vegi-duerum",
-          "name": "Vegi Dürüm",
-          "description": "Gerollt, mit gegrilltem Gemüse, Schafskäse, Salat und Sauce.",
-          "price": 12,
-          "badges": ["vegetarisch"],
+          "id": "lammkoteletts",
+          "name": "Lammkoteletts",
+          "description": "Drei Koteletts vom Baselbieter Lamm, mit Rosmarin und Knoblauch.",
+          "price": 46,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "poulet",
+          "name": "Maispoulet",
+          "description": "Halbes Maispoulet vom Grill, mit Zitrone und Thymian.",
+          "price": 34,
+          "badges": [],
           "featured": false,
           "available": true,
           "image": null
@@ -74,46 +126,75 @@
       ]
     },
     {
-      "id": "lahmacun-pide",
-      "name": "Lahmacun & Pide",
-      "description": "Frisch aus dem Steinofen",
+      "id": "vorspeisen",
+      "name": "Vorspeisen",
+      "description": "Zum Anfangen — oder zum Teilen",
       "items": [
         {
-          "id": "lahmacun",
-          "name": "Lahmacun",
-          "description": "Dünner Fladen mit Hackfleisch, Tomaten und Petersilie, dazu Salat und Zitrone.",
-          "price": 10,
-          "badges": ["hausgemacht"],
+          "id": "tatar",
+          "name": "Rindstatar",
+          "description": "Von Hand geschnitten, klassisch angemacht, mit Toast und Butter.",
+          "price": 24,
+          "variants": [
+            {
+              "label": "80 g",
+              "price": 24
+            },
+            {
+              "label": "160 g",
+              "price": 38
+            }
+          ],
+          "badges": [
+            "hausgemacht"
+          ],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "pide-kaese",
-          "name": "Pide Käse",
-          "description": "Mit Schafskäse und Mozzarella.",
-          "price": 13,
-          "badges": ["vegetarisch"],
+          "id": "carpaccio",
+          "name": "Carpaccio vom Rind",
+          "description": "Hauchdünn, mit Rucola, Parmesan und Olivenöl.",
+          "price": 26,
+          "badges": [],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "pide-spinat",
-          "name": "Pide Spinat",
-          "description": "Mit Spinat, Schafskäse und Ei.",
-          "price": 14,
-          "badges": ["vegetarisch"],
+          "id": "burrata",
+          "name": "Burrata",
+          "description": "Mit Ofentomaten, Basilikum und Balsamico.",
+          "price": 22,
+          "badges": [
+            "vegetarisch"
+          ],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "pide-kebab",
-          "name": "Pide Kebabfleisch",
-          "description": "Mit Kebabfleisch, Mozzarella und Peperoni.",
+          "id": "suppe",
+          "name": "Kürbissuppe",
+          "description": "Mit Kürbiskernöl und geröstetem Brot.",
           "price": 16,
-          "badges": [],
+          "badges": [
+            "vegetarisch",
+            "vegan"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "garnelen",
+          "name": "Garnelen vom Grill",
+          "description": "Vier Riesengarnelen mit Knoblauch und Chili.",
+          "price": 28,
+          "badges": [
+            "scharf"
+          ],
           "featured": false,
           "available": true,
           "image": null
@@ -121,26 +202,51 @@
       ]
     },
     {
-      "id": "falafel",
-      "name": "Falafel",
-      "description": "Vegetarisch, frisch frittiert",
+      "id": "saucen",
+      "name": "Saucen & Butter",
+      "description": "Zum Steak — alle hausgemacht",
       "items": [
         {
-          "id": "falafel-taschenbrot",
-          "name": "Falafel im Taschenbrot",
-          "description": "Mit Salat, Hummus und Joghurt-Sauce.",
-          "price": 11,
-          "badges": ["vegetarisch", "vegan"],
+          "id": "cafe-de-paris",
+          "name": "Café de Paris",
+          "description": "Die Butter mit dem Geheimnis.",
+          "price": 5,
+          "badges": [
+            "hausgemacht"
+          ],
           "featured": false,
           "available": true,
-          "image": { "src": "/images/falafel-taschenbrot.webp", "alt": "Falafel im Taschenbrot mit Salat" }
+          "image": null
         },
         {
-          "id": "falafel-teller",
-          "name": "Falafel Teller",
-          "description": "Sechs Falafel mit Reis, Salat und Hummus.",
-          "price": 16,
-          "badges": ["vegetarisch", "vegan"],
+          "id": "pfeffersauce",
+          "name": "Pfeffersauce",
+          "description": "Mit grünem Pfeffer und Cognac.",
+          "price": 5,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "bearnaise",
+          "name": "Béarnaise",
+          "description": "Mit Estragon, frisch aufgeschlagen.",
+          "price": 5,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "chimichurri",
+          "name": "Chimichurri",
+          "description": "Petersilie, Knoblauch, Chili — nach argentinischer Art.",
+          "price": 5,
+          "badges": [
+            "scharf",
+            "vegan"
+          ],
           "featured": false,
           "available": true,
           "image": null
@@ -148,236 +254,384 @@
       ]
     },
     {
-      "id": "burger-snacks",
-      "name": "Burger & Snacks",
-      "description": "Vom Grill und aus der Fritteuse",
+      "id": "beilagen",
+      "name": "Beilagen",
+      "description": "Eine Beilage reicht, zwei sind besser",
       "items": [
-        {
-          "id": "hamburger",
-          "name": "Hamburger",
-          "description": "Mit Rindfleisch, Salat, Tomate und Sauce.",
-          "price": 10,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "cheeseburger",
-          "name": "Cheeseburger",
-          "description": "Mit Rindfleisch, Käse, Salat und Sauce.",
-          "price": 11,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "chicken-nuggets",
-          "name": "Chicken Nuggets",
-          "description": "8 Stück, mit Sauce nach Wahl.",
-          "price": 8,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
         {
           "id": "pommes",
           "name": "Pommes frites",
-          "description": "Portion, mit Ketchup oder Mayonnaise.",
-          "price": 6,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "pizza",
-      "name": "Pizza",
-      "description": "Alle Pizzas mit Tomaten, Mozzarella und Oregano — Ø 30 cm",
-      "items": [
-        {
-          "id": "pizza-margherita",
-          "name": "Margherita",
-          "description": "Tomaten, Mozzarella, Oregano.",
-          "price": 13,
-          "badges": ["vegetarisch"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-funghi",
-          "name": "Funghi",
-          "description": "Champignons.",
-          "price": 14,
-          "badges": ["vegetarisch"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-prosciutto",
-          "name": "Prosciutto",
-          "description": "Vorderschinken.",
-          "price": 15,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-salami",
-          "name": "Salami",
-          "description": "Salami.",
-          "price": 15,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-diavola",
-          "name": "Diavola",
-          "description": "Scharfe Salami, Peperoncini.",
-          "price": 16,
-          "badges": ["scharf"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-vegetariana",
-          "name": "Vegetariana",
-          "description": "Auberginen, Zucchetti, Peperoni, Champignons.",
-          "price": 16,
-          "badges": ["vegetarisch"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-quattro-formaggi",
-          "name": "Quattro Formaggi",
-          "description": "Gorgonzola, Parmesan, Gruyère.",
-          "price": 16,
-          "badges": ["vegetarisch"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-tonno",
-          "name": "Tonno e Cipolla",
-          "description": "Thon, Zwiebeln.",
-          "price": 16,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-kebab",
-          "name": "Kebab",
-          "description": "Kebabfleisch, Zwiebeln, Joghurt-Sauce.",
-          "price": 17,
-          "badges": ["beliebt"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "pizza-sesam",
-          "name": "Sesam",
-          "description": "Sucuk, Peperoni, Schafskäse, Ei — unsere Hauspizza.",
-          "price": 18,
-          "badges": ["hausgemacht"],
-          "featured": false,
-          "available": true,
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "menues",
-      "name": "Mittagsmenüs",
-      "description": "Montag bis Freitag, 11 bis 14 Uhr — inklusive Getränk 5 dl",
-      "items": [
-        {
-          "id": "menu-doener",
-          "name": "Döner Kebab mit Getränk",
-          "description": "Döner nach Wahl, dazu ein Getränk 5 dl.",
-          "price": 14,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "menu-box",
-          "name": "Döner Box gross mit Getränk",
-          "description": "Grosse Box, dazu ein Getränk 5 dl.",
-          "price": 15.5,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "menu-falafel",
-          "name": "Falafel im Taschenbrot mit Getränk",
-          "description": "Dazu ein Getränk 5 dl.",
-          "price": 13.5,
-          "badges": ["vegetarisch"],
-          "featured": false,
-          "available": true,
-          "image": null
-        },
-        {
-          "id": "menu-pizza",
-          "name": "Pizza nach Wahl mit Getränk",
-          "description": "Margherita bis Vegetariana, dazu ein Getränk 5 dl.",
-          "price": 17,
-          "badges": [],
-          "featured": false,
-          "available": true,
-          "image": null
-        }
-      ]
-    },
-    {
-      "id": "salate",
-      "name": "Salate",
-      "description": "Frisch zubereitet, mit Sauce nach Wahl",
-      "items": [
-        {
-          "id": "salat-gemischt",
-          "name": "Gemischter Salat",
-          "description": "Blattsalat, Tomaten, Gurken, Zwiebeln, Mais.",
+          "description": "Handgeschnitten, zweimal frittiert.",
           "price": 9,
-          "badges": ["vegetarisch"],
+          "badges": [
+            "vegan"
+          ],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "salat-hirtensalat",
-          "name": "Hirtensalat",
-          "description": "Tomaten, Gurken, Peperoni, Oliven, Schafskäse.",
+          "id": "gratin",
+          "name": "Kartoffelgratin",
+          "description": "Mit Rahm und Gruyère.",
+          "price": 10,
+          "badges": [
+            "vegetarisch"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "ofenkartoffel",
+          "name": "Ofenkartoffel",
+          "description": "Mit Sauerrahm und Schnittlauch.",
+          "price": 9,
+          "badges": [
+            "vegetarisch"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "grillgemuese",
+          "name": "Grillgemüse",
+          "description": "Zucchetti, Peperoni, Auberginen — vom selben Rost wie das Fleisch.",
           "price": 11,
-          "badges": ["vegetarisch"],
+          "badges": [
+            "vegan"
+          ],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "salat-poulet",
-          "name": "Salat mit Pouletstreifen",
-          "description": "Gemischter Salat mit gegrilltem Poulet.",
-          "price": 13,
+          "id": "spinat",
+          "name": "Blattspinat",
+          "description": "Mit Knoblauch und Butter.",
+          "price": 10,
+          "badges": [
+            "vegetarisch"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "salat",
+          "name": "Blattsalat",
+          "description": "Mit Hausdressing.",
+          "price": 8,
+          "badges": [
+            "vegan"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "klassiker",
+      "name": "Burger & Klassiker",
+      "description": "Wer kein ganzes Steak will",
+      "items": [
+        {
+          "id": "burger",
+          "name": "Firestone Burger",
+          "description": "200 g Rind vom Grill, Cheddar, Speck, Zwiebelkonfitüre, dazu Pommes.",
+          "price": 29,
+          "badges": [
+            "hausgemacht",
+            "beliebt"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "ribs",
+          "name": "Spareribs",
+          "description": "Vom Schwein, langsam gegart und dann über der Glut glasiert. Mit Coleslaw.",
+          "price": 38,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "steak-frites",
+          "name": "Steak frites",
+          "description": "Hüftsteak 200 g mit Pommes und Café de Paris.",
+          "price": 36,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "gemuese-teller",
+          "name": "Grillgemüse-Teller",
+          "description": "Mit Halloumi, Ofenkartoffel und Chimichurri.",
+          "price": 27,
+          "badges": [
+            "vegetarisch"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "mittag",
+      "name": "Mittagsmenü",
+      "description": "Dienstag bis Freitag, 11:30 bis 14 Uhr — inklusive Salat oder Suppe",
+      "items": [
+        {
+          "id": "mittag-steak",
+          "name": "Steak-Menü",
+          "description": "Entrecôte 180 g mit Beilage nach Wahl.",
+          "price": 39,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "mittag-burger",
+          "name": "Burger-Menü",
+          "description": "Firestone Burger mit Pommes.",
+          "price": 26,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "mittag-vegi",
+          "name": "Vegi-Menü",
+          "description": "Grillgemüse-Teller mit Halloumi.",
+          "price": 24,
+          "badges": [
+            "vegetarisch"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "description": "Zum Schluss",
+      "items": [
+        {
+          "id": "creme-brulee",
+          "name": "Crème brûlée",
+          "description": "Mit Bourbon-Vanille, am Tisch karamellisiert.",
+          "price": 12,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "schokoladenkuchen",
+          "name": "Schokoladenkuchen",
+          "description": "Mit flüssigem Kern und Vanilleglace.",
+          "price": 14,
+          "badges": [
+            "beliebt"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "kaese",
+          "name": "Käseauswahl",
+          "description": "Vier Sorten aus dem Baselbiet, mit Birnenbrot.",
+          "price": 16,
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "sorbet",
+          "name": "Sorbet",
+          "description": "Zwei Kugeln, Sorten nach Saison.",
+          "price": 9,
+          "badges": [
+            "vegan"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        }
+      ]
+    },
+    {
+      "id": "weine",
+      "name": "Weinkarte",
+      "description": "Eine kurze Auswahl — offen im Glas (1 dl) oder als Flasche (75 cl)",
+      "items": [
+        {
+          "id": "pinot-noir",
+          "name": "Pinot Noir, Baselbiet AOC",
+          "description": "Aus Maisprach. Leicht, fruchtig, unser Hauswein.",
+          "price": 8.5,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 8.5
+            },
+            {
+              "label": "Flasche",
+              "price": 52
+            }
+          ],
+          "badges": [
+            "beliebt"
+          ],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "merlot",
+          "name": "Merlot, Ticino DOC",
+          "description": "Weich und rund, passt zu Filet und Lamm.",
+          "price": 9,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 9
+            },
+            {
+              "label": "Flasche",
+              "price": 58
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "malbec",
+          "name": "Malbec, Mendoza",
+          "description": "Kräftig und dunkel — der Klassiker zum Ribeye.",
+          "price": 9.5,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 9.5
+            },
+            {
+              "label": "Flasche",
+              "price": 62
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "rioja",
+          "name": "Rioja Reserva",
+          "description": "Vier Jahre gereift, mit Holz und Würze. Zum Tomahawk.",
+          "price": 11,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 11
+            },
+            {
+              "label": "Flasche",
+              "price": 74
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "barolo",
+          "name": "Barolo DOCG",
+          "description": "Nur als Flasche. Für den besonderen Abend.",
+          "price": 118,
+          "variants": [
+            {
+              "label": "Flasche",
+              "price": 118
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "chasselas",
+          "name": "Chasselas, Baselbiet AOC",
+          "description": "Frisch und trocken, zum Anfangen.",
+          "price": 7.5,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 7.5
+            },
+            {
+              "label": "Flasche",
+              "price": 46
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "chardonnay",
+          "name": "Chardonnay, Bourgogne",
+          "description": "Im Holz ausgebaut, zu Garnelen und Poulet.",
+          "price": 9,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 9
+            },
+            {
+              "label": "Flasche",
+              "price": 56
+            }
+          ],
+          "badges": [],
+          "featured": false,
+          "available": true,
+          "image": null
+        },
+        {
+          "id": "prosecco",
+          "name": "Prosecco Superiore DOCG",
+          "description": "Als Apéro oder zum Dessert.",
+          "price": 8,
+          "variants": [
+            {
+              "label": "Glas",
+              "price": 8
+            },
+            {
+              "label": "Flasche",
+              "price": 48
+            }
+          ],
           "badges": [],
           "featured": false,
           "available": true,
@@ -388,14 +642,14 @@
     {
       "id": "getraenke",
       "name": "Getränke",
-      "description": "Kalt und warm",
+      "description": "Ohne Wein",
       "items": [
         {
-          "id": "ayran",
-          "name": "Ayran",
-          "description": "Hausgemacht, 3 dl.",
-          "price": 3,
-          "badges": ["hausgemacht"],
+          "id": "mineral",
+          "name": "Mineralwasser",
+          "description": "7.5 dl, mit oder ohne Kohlensäure.",
+          "price": 7,
+          "badges": [],
           "featured": false,
           "available": true,
           "image": null
@@ -403,38 +657,38 @@
         {
           "id": "softdrinks",
           "name": "Softdrinks",
-          "description": "5 dl PET, verschiedene Sorten.",
-          "price": 3.5,
+          "description": "3 dl, verschiedene Sorten.",
+          "price": 5,
           "badges": [],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "mineral",
-          "name": "Mineralwasser",
-          "description": "5 dl, mit oder ohne Kohlensäure.",
-          "price": 3,
+          "id": "bier",
+          "name": "Bier vom Fass",
+          "description": "3 dl, Lagerbier aus der Region.",
+          "price": 6,
           "badges": [],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "tee",
-          "name": "Türkischer Tee",
-          "description": "Im Glas, vor Ort.",
-          "price": 2.5,
+          "id": "espresso",
+          "name": "Espresso",
+          "description": "Auch als doppelter Espresso oder mit Milch.",
+          "price": 4.5,
           "badges": [],
           "featured": false,
           "available": true,
           "image": null
         },
         {
-          "id": "kaffee",
-          "name": "Kaffee",
-          "description": "Aus der Tasse oder zum Mitnehmen.",
-          "price": 3.5,
+          "id": "digestif",
+          "name": "Grappa oder Whisky",
+          "description": "4 cl, Auswahl an der Bar.",
+          "price": 12,
           "badges": [],
           "featured": false,
           "available": true,
