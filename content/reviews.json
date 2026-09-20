@@ -1,0 +1,31 @@
+{
+  "eyebrow": "Bewertungen",
+  "title": "Was Gäste zurückmelden",
+  "intro": "Drei Dinge, die uns Gäste am häufigsten sagen.",
+  "rating": null,
+  "themes": [
+    {
+      "id": "r1",
+      "icon": "leaf",
+      "label": "Frisches Gemüse",
+      "text": "Salat, Tomaten und Zwiebeln schneiden wir mehrmals am Tag frisch. Sie stecken in jedem Kebab, im Dürüm und im Taschenbrot — und wer nur das möchte, findet drei Salate als eigene Gerichte auf der Karte.",
+      "textShort": "Gemüse mehrmals täglich frisch geschnitten. Drei Salate gibt es auch als eigene Gerichte."
+    },
+    {
+      "id": "r2",
+      "icon": "flame",
+      "label": "Eigenes Brot",
+      "text": "Das Fladenbrot kommt aus dem eigenen Ofen, nicht aus der Tiefkühltruhe. Es ist die Grundlage von Döner, Dürüm und Pide — und noch warm, wenn es über den Tresen geht.",
+      "textShort": "Fladenbrot aus dem eigenen Ofen, noch warm über den Tresen."
+    },
+    {
+      "id": "r3",
+      "icon": "clock",
+      "label": "Schnell am Mittag",
+      "text": "Zwischen zwölf und eins ist bei uns am meisten los — und trotzdem wartet kaum jemand länger als fünf Minuten. Wer vorbestellt, gar nicht.",
+      "textShort": "Auch am Mittag selten mehr als fünf Minuten Wartezeit. Vorbestellt: keine."
+    }
+  ],
+  "quotes": [],
+  "quotesPlaceholder": "Sobald Sie einzelne Bewertungen freigeben möchten, werden sie hier als Zitate angezeigt."
+}

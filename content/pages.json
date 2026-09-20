@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "eyebrow": "Mitten in Liestal",
+    "titleLines": [
+      "Kebab,",
+      "frisch vom",
+      "Drehspiess."
+    ],
+    "subtitle": "Döner, Dürüm, Pide und Pizza an der Musterstrasse 12. Zum Mitnehmen oder gemütlich bei uns – drinnen und draussen.",
+    "primaryCta": {
+      "label": "Zur Speisekarte",
+      "href": "#speisekarte"
+    },
+    "secondaryCta": {
+      "label": "061 000 00 00",
+      "href": "tel:+41610000000"
+    },
+    "facts": [
+      "Sitzplätze drinnen & draussen",
+      "Zum Mitnehmen",
+      "Twint"
+    ],
+    "image": {
+      "src": "/images/hero-hintergrund.webp",
+      "alt": "",
+      "placeholderLabel": "Hero-Hintergrund"
+    }
+  },
+  "valueStrip": [
+    "Kebab",
+    "Dürüm",
+    "Pide",
+    "Pizza",
+    "Falafel",
+    "Lahmacun",
+    "Salate",
+    "Pommes"
+  ],
+  "highlights": {
+    "eyebrow": "Warum Sesam",
+    "title": "Drei gute Gründe",
+    "items": [
+      {
+        "id": "h1",
+        "icon": "pin",
+        "tone": "primary",
+        "fact": "Mitten in der Altstadt",
+        "title": "Kurzer Weg, kurze Wartezeit",
+        "text": "Wir liegen an der Musterstrasse, zwei Minuten vom Bahnhof und gleich beim Parkhaus. Wer es eilig hat, ruft kurz vorher an und holt die Bestellung im Vorbeigehen ab.",
+        "textShort": "Zwei Minuten vom Bahnhof. Vorbestellen per Telefon, abholen im Vorbeigehen."
+      },
+      {
+        "id": "h2",
+        "icon": "flame",
+        "tone": "accent",
+        "fact": "Jeden Tag frisch",
+        "title": "Brot und Spiess aus dem eigenen Haus",
+        "text": "Das Fladenbrot backen wir mehrmals täglich selbst, der Drehspiess wird jeden Morgen neu aufgesetzt. Was am Abend übrig bleibt, kommt am nächsten Tag nicht mehr auf die Karte.",
+        "textShort": "Fladenbrot mehrmals täglich selbst gebacken, Spiess jeden Morgen neu."
+      },
+      {
+        "id": "h3",
+        "icon": "hand",
+        "tone": "success",
+        "fact": "Drinnen & draussen",
+        "title": "Mitnehmen oder bleiben",
+        "text": "Sitzplätze gibt es drinnen und draussen, der Zugang ist rollstuhlgängig. Und wer lieber zu Hause isst, lässt sich alles von der Karte einpacken — bezahlt wird bar, mit Karte oder Twint.",
+        "textShort": "Sitzplätze drinnen und draussen, rollstuhlgängig. Bezahlt wird bar, mit Karte oder Twint."
+      }
+    ]
+  },
+  "menuSection": {
+    "title": "Speisekarte",
+    "intro": "Kebab vom Drehspiess, dazu Pide, Lahmacun, Falafel, Burger und zehn Pizzas — alles frisch zubereitet."
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Kurz zu uns",
+    "paragraphs": [
+      "Sesam ist ein kleiner Kebab-Take-away in der Liestaler Altstadt. Seit 2015 kochen wir hier für unterwegs, für die Mittagspause und für alle, die abends noch etwas Warmes wollen.",
+      "Hinter dem Tresen steht die Familie Demir: Vater Ali am Spiess, Mutter Ayse am Ofen, und am Wochenende helfen die beiden Kinder beim Einpacken. Die Rezepte stammen aus Adana — vor allem die Joghurt-Sauce, die wir jeden Morgen frisch anrühren."
+    ],
+    "stats": [
+      {
+        "value": "2015",
+        "label": "eröffnet"
+      },
+      {
+        "value": "7",
+        "label": "Tage pro Woche offen"
+      },
+      {
+        "value": "100 m",
+        "label": "zum Parkhaus"
+      }
+    ],
+    "image": {
+      "src": "/images/lokal.webp",
+      "alt": "Zwei Drehspiesse mit Fleisch hinter dem Tresen eines Take-aways.",
+      "placeholderLabel": "Über uns"
+    }
+  },
+  "visit": {
+    "eyebrow": "Besuch",
+    "title": "Vorbeikommen",
+    "intro": "Öffnungszeiten, Adresse und Telefonnummer auf einen Blick.",
+    "infos": [
+      {
+        "label": "Sitzplätze",
+        "value": "Drinnen und draussen"
+      },
+      {
+        "label": "Zugang",
+        "value": "Rollstuhlgängig"
+      },
+      {
+        "label": "Zahlungsmittel",
+        "value": "Bar, Karte und Twint"
+      },
+      {
+        "label": "Parkplätze",
+        "value": "Parkhaus in 100 Metern"
+      }
+    ]
+  },
+  "footer": {
+    "note": "Kebab & Take Away an der Musterstrasse 12, mitten in Liestal.",
+    "legalLinks": [
+      {
+        "label": "Impressum",
+        "href": "/impressum"
+      },
+      {
+        "label": "Datenschutz",
+        "href": "/datenschutz"
+      }
+    ]
+  }
+}

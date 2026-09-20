@@ -1,0 +1,55 @@
+{
+  "timezone": "Europe/Zurich",
+  "days": [
+    {
+      "key": "mon",
+      "label": "Montag",
+      "shortLabel": "Mo",
+      "closed": false,
+      "slots": [{ "open": "10:30", "close": "22:00" }]
+    },
+    {
+      "key": "tue",
+      "label": "Dienstag",
+      "shortLabel": "Di",
+      "closed": false,
+      "slots": [{ "open": "10:30", "close": "22:00" }]
+    },
+    {
+      "key": "wed",
+      "label": "Mittwoch",
+      "shortLabel": "Mi",
+      "closed": false,
+      "slots": [{ "open": "10:30", "close": "22:00" }]
+    },
+    {
+      "key": "thu",
+      "label": "Donnerstag",
+      "shortLabel": "Do",
+      "closed": false,
+      "slots": [{ "open": "10:30", "close": "22:00" }]
+    },
+    {
+      "key": "fri",
+      "label": "Freitag",
+      "shortLabel": "Fr",
+      "closed": false,
+      "slots": [{ "open": "10:30", "close": "23:30" }]
+    },
+    {
+      "key": "sat",
+      "label": "Samstag",
+      "shortLabel": "Sa",
+      "closed": false,
+      "slots": [{ "open": "11:00", "close": "23:30" }]
+    },
+    {
+      "key": "sun",
+      "label": "Sonntag",
+      "shortLabel": "So",
+      "closed": false,
+      "slots": [{ "open": "11:00", "close": "21:00" }]
+    }
+  ],
+  "note": "An Feiertagen können abweichende Zeiten gelten."
+}

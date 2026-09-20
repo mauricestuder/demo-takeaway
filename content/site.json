@@ -1,0 +1,55 @@
+{
+  "name": "Sesam",
+  "legalName": "Sesam Take Away GmbH",
+  "tagline": "Kebab & Take Away",
+  "locality": "Liestal",
+  "priceRange": "CHF",
+  "cuisine": [
+    "Kebab",
+    "Türkisch",
+    "Pizza",
+    "Street Food"
+  ],
+  "address": {
+    "street": "Musterstrasse 12",
+    "zip": "4410",
+    "city": "Liestal",
+    "region": "Basel-Landschaft",
+    "country": "Schweiz",
+    "countryCode": "CH",
+    "hint": "Mitten in der Altstadt, zwei Minuten vom Bahnhof.",
+    "mapsQuery": "Liestal",
+    "geo": null
+  },
+  "contact": {
+    "phone": "061 000 00 00",
+    "phoneHref": "+41610000000",
+    "email": "",
+    "whatsapp": ""
+  },
+  "social": [],
+  "seo": {
+    "siteUrl": "https://example.ch",
+    "title": "Sesam – Kebab & Take Away in Liestal",
+    "titleTemplate": "%s | Sesam Liestal",
+    "description": "Kebab, Dürüm, Pide und Pizza mitten in Liestal. Zum Mitnehmen oder vor Ort – Beispielseite eines erfundenen Betriebs.",
+    "keywords": [
+      "Kebab Liestal",
+      "Döner Liestal",
+      "Take Away Liestal",
+      "Dürüm Liestal",
+      "Pizza Liestal"
+    ],
+    "ogImageAlt": "Sesam – Kebab & Take Away in Liestal"
+  },
+  "facts": {
+    "seating": "Sitzplätze drinnen und draussen",
+    "takeaway": "Zum Mitnehmen",
+    "accessibility": "Rollstuhlgängig",
+    "payment": "Bar, Karte und Twint",
+    "parking": "Parkhaus in 100 m",
+    "station": "Zwei Minuten vom Bahnhof"
+  },
+  "demoMode": true,
+  "demoNotice": "Beispielseite: «Sesam» ist ein erfundener Betrieb. So könnte Ihre Website aussehen – gebaut von Maurice Studer, Ramlinsburg, im Rahmen einer Projektarbeit."
+}

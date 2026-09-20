@@ -1,0 +1,67 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Laufende Deployments nicht abbrechen, aber auch nicht stapeln.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Typen prüfen
+        run: npx tsc --noEmit
+
+      - name: Öffnungszeiten-Selbsttest
+        run: npm run check:hours
+
+      - name: Pages konfigurieren
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Statisch exportieren
+        env:
+          GITHUB_PAGES: "true"
+          # Projektseiten liegen unter /<repo>/ — ohne basePath brechen
+          # sämtliche Asset-Pfade.
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: npx next build
+
+      - name: .nojekyll anlegen
+        # Ohne diese Datei verschluckt Jekyll alle Ordner, die mit _ beginnen
+        # (z. B. /_next) — die Seite käme ohne CSS und JavaScript an.
+        run: touch out/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

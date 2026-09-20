@@ -1,0 +1,94 @@
+Bildnachweis
+============
+
+Bis auf eine Ausnahme (doener-box.webp, siehe unten) stammen alle
+Fotos von Pexels und stehen unter der Pexels-Lizenz:
+kostenlos, auch kommerziell nutzbar, Bearbeitung erlaubt, keine
+Namensnennung erforderlich (https://www.pexels.com/license/).
+
+Es sind PLATZHALTER fuer einen erfundenen Betrieb. Bei einem echten
+Kunden werden sie durch dessen eigene Aufnahmen ersetzt.
+
+Datei                        Quelle
+---------------------------  ------------------------------------------
+hero-hintergrund.webp        pexels.com/photo/11286814
+doener-kebab.webp            pexels.com/photo/29306497
+duerum-kebab.webp            pexels.com/photo/11286814
+pepito.webp                  pexels.com/photo/1603898    (zurzeit ungenutzt)
+falafel-taschenbrot.webp     pexels.com/photo/14877083   (zurzeit ungenutzt)
+doener-box.webp              flickr.com/.../54446966205   ABWEICHEND, s.u.
+doener-teller.webp           pexels.com/photo/18062061
+lokal.webp                   pexels.com/photo/27668672
+
+Bearbeitung: mittig auf 4:3 beschnitten, als WebP gespeichert.
+Die vier Gerichtsbilder sind zusaetzlich auf einen gemeinsamen Look
+gebracht — erzeugt von scripts/build-gerichtsbilder.mjs:
+
+  mittlere Helligkeit  rund 112  (vorher 80 bis 114)
+  Farbspanne           rund 78   (vorher 49 bis 119)
+
+Die Farbspanne ist der Abstand zwischen staerkstem und schwaechstem
+Kanal und dient als grobes Mass fuer die Saettigung. Ohne den Abgleich
+stand ein knallorangenes Duerum neben einem flauen Teller.
+
+Zwei der vier sind zusaetzlich neu beschnitten:
+
+  doener-kebab.webp   Ausschnitt rechts der Bildmitte. Links im Original
+                      steht eine Coca-Cola-Dose — fremde Marken gehoeren
+                      nicht auf die Seite.
+  doener-teller.webp  Eng auf den Teller. Im Original nimmt eine
+                      Backsteinwand das obere Drittel ein; die drei
+                      anderen Karten stehen auf Holz.
+
+doener-box.webp — abweichende Lizenz, bitte beachten
+----------------------------------------------------
+Dieses eine Bild kommt NICHT von Pexels und ist NICHT nachweisfrei.
+
+  Fotograf    Christian Frank (chfrank_cgn)
+  Quelle      flickr.com/photos/49814345@N04/54446966205
+  Lizenz      CC BY 2.0, creativecommons.org/licenses/by/2.0/
+  Bearbeitet  Ausschnitt {left:24, top:130, width:800, height:600},
+              danach auf den gemeinsamen Look der vier Karten gebracht
+
+CC BY 2.0 erlaubt die gewerbliche Nutzung, verlangt dafuer aber Namen,
+Lizenz, Fundstelle und Bearbeitungshinweis — und zwar sichtbar auf der
+Seite, nicht nur in dieser Datei. Die Angabe steht deshalb zusaetzlich
+in der Fusszeile (src/components/Footer.tsx). Wird das Bild durch eine
+eigene Aufnahme ersetzt, kann der Absatz dort ersatzlos weg.
+
+Warum der Umweg ueber Flickr: Pexels, Pixabay und Unsplash fuehren keine
+einzige Aufnahme einer gefuellten Doener Box in der Faltschachtel — rund
+ein Dutzend Suchbegriffe, dreimal geprueft. Fuendig wurde erst die Suche
+ueber Openverse und Wikimedia Commons, also ueber CC-lizenziertes
+Material. Der Platzhalter davor zeigte Fleisch mit Pommes auf einem
+Teller: den Inhalt der Box, aber eben nicht die Box.
+
+Auf der abgebildeten Schachtel steht nur Aufdruck ohne Firmenname
+(DOENER BOX / Guten Appetit - Afiyet Olsun), also handelsuebliche
+Verpackung, wie sie jeder Betrieb kauft. Geprueft an einer
+Vergroesserung des unteren Drittels.
+
+Nicht verschwiegen: Der Fotograf betitelt die Aufnahme als vegane Doener
+Box. Auf dem Bild ist das nicht zu erkennen, und es ist ohnehin ein
+Platzhalter — beim Austausch gegen eigene Fotos erledigt sich der Punkt.
+
+4:3 liegt zwischen den drei Container-Verhaeltnissen der Seite
+(5:4 / 4:3 / 16:10), dadurch schneidet keiner der Zuschnitte
+nennenswert etwas weg.
+
+hero-hintergrund.webp liegt hinter dem ganzen Kopfbereich und ist
+derselbe Aufnahme wie duerum-kebab.webp, nur gross beschnitten
+(2000x1000). Wird hero.image.src in content/pages.json geleert, faellt
+der Kopfbereich auf den hellen warmen Verlauf zurueck.
+
+lokal.webp wurde ersetzt. Die vorherige Aufnahme (17965370) zeigte
+einen deutlich erkennbaren Mann bei der Arbeit an einem Drehspiess. Auf
+der Seite eines anderen Betriebs gelesen heisst das: "Das ist unser
+Mitarbeiter" — was nicht stimmt und wozu die abgebildete Person nie
+zugestimmt hat. Das neue Bild zeigt nur Technik: zwei Drehspiesse hinter
+dem Tresen, keine Personen. Der Zuschnitt endet links vom Schild eines
+anderen Betriebs ("Antalya"), das im Original rechts unten steht.
+Helligkeit von 87 auf 104 angehoben.
+
+karte.webp ist kein Foto, sondern ein erzeugtes Kartenbild
+(siehe karte.txt und scripts/build-map.mjs).

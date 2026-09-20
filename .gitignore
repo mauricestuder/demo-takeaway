@@ -1,0 +1,16 @@
+# Abhängigkeiten
+node_modules/
+
+# Build-Ausgaben
+.next/
+out/
+*.tsbuildinfo
+
+# Umgebung
+.env
+.env.local
+.env*.local
+
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db

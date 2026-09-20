@@ -1,0 +1,83 @@
+{
+  "impressum": {
+    "title": "Impressum",
+    "intro": "Angaben zum Betrieb. Diese Seite ist eine Beispielseite: Der Betrieb «Sesam» ist erfunden, Adresse und Telefonnummer sind Platzhalter.",
+    "sections": [
+      {
+        "heading": "Verantwortlich für den Inhalt",
+        "paragraphs": [
+          "Sesam Take Away GmbH",
+          "Musterstrasse 12, 4410 Liestal, Schweiz"
+        ]
+      },
+      {
+        "heading": "Kontakt",
+        "paragraphs": [
+          "Telefon: 061 000 00 00",
+          "Platzhalter: E-Mail-Adresse für Anfragen ergänzen."
+        ]
+      },
+      {
+        "heading": "Handelsregister und Mehrwertsteuer",
+        "paragraphs": [
+          "Platzhalter: UID und Handelsregister-Eintrag ergänzen.",
+          "Platzhalter: MWST-Nummer ergänzen, falls der Betrieb mehrwertsteuerpflichtig ist."
+        ]
+      },
+      {
+        "heading": "Gestaltung und Umsetzung",
+        "paragraphs": [
+          "Maurice Studer, Ramlinsburg — im Rahmen einer Projektarbeit der Sekundarschule Frenke, Liestal."
+        ]
+      },
+      {
+        "heading": "Haftungsausschluss",
+        "paragraphs": [
+          "Die Inhalte dieser Website werden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität — insbesondere bei Preisen und Öffnungszeiten — wird keine Gewähr übernommen.",
+          "Für Inhalte verlinkter externer Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+          "Texte, Bilder und Gestaltung dieser Website sind urheberrechtlich geschützt. Eine Verwendung ausserhalb dieser Website bedarf der vorherigen Zustimmung."
+        ]
+      }
+    ]
+  },
+  "datenschutz": {
+    "title": "Datenschutz",
+    "intro": "Diese Website ist bewusst datensparsam gebaut. Vor dem Livegang eines echten Betriebs ist die Erklärung auf den Betrieb und den Hosting-Anbieter zuzuschneiden.",
+    "sections": [
+      {
+        "heading": "Verantwortliche Stelle",
+        "paragraphs": [
+          "Verantwortlich im Sinne des Schweizer Datenschutzgesetzes (DSG):",
+          "Sesam Take Away GmbH, Musterstrasse 12, 4410 Liestal, Telefon 061 000 00 00."
+        ]
+      },
+      {
+        "heading": "Welche Daten erhoben werden",
+        "paragraphs": [
+          "Diese Website lädt keine Analyse-Dienste, keine Werbe-Tracker und keine externen Schriftarten. Es werden keine Cookies gesetzt, die eine Einwilligung erfordern.",
+          "Es gibt kein Kontaktformular und keine Anmeldung — es werden also keine Daten aktiv von Ihnen erfasst."
+        ]
+      },
+      {
+        "heading": "Server-Protokolle",
+        "paragraphs": [
+          "Beim Abruf der Seite protokolliert der Hosting-Anbieter technisch notwendige Daten wie IP-Adresse, Zeitpunkt des Zugriffs, aufgerufene Seite und Browsertyp.",
+          "Platzhalter: Anbieter und Aufbewahrungsdauer eintragen, sobald das Hosting feststeht."
+        ]
+      },
+      {
+        "heading": "Externe Links",
+        "paragraphs": [
+          "Beim Klick auf die Kartenverlinkung verlassen Sie diese Website. Ab diesem Zeitpunkt gelten die Datenschutzbestimmungen des jeweiligen Anbieters."
+        ]
+      },
+      {
+        "heading": "Ihre Rechte",
+        "paragraphs": [
+          "Sie haben das Recht auf Auskunft über die zu Ihrer Person bearbeiteten Daten sowie auf deren Berichtigung oder Löschung.",
+          "Wenden Sie sich dafür an die oben genannte verantwortliche Stelle."
+        ]
+      }
+    ]
+  }
+}

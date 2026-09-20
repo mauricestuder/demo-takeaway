@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+/* ================================================================== */
+/*  Design-Tokens                                                      */
+/*                                                                     */
+/*  Palette und Typografie stammen aus der UI/UX-Pro-Max-Datenbank,    */
+/*  Kategorie "Restaurant/Food Service" bzw. Font-Pairing              */
+/*  "Restaurant Menu". Wer die Seite umfärben will, ändert nur diesen  */
+/*  Block — alle Komponenten lesen ausschliesslich diese Variablen.    */
+/* ================================================================== */
+
+@theme {
+  /* --- Semantische Farbrollen ---------------------------------- */
+  --color-primary: #dc2626; /* Appetitliches Rot, Hauptakzent   */
+  --color-on-primary: #ffffff;
+  --color-primary-hover: #b91c1c; /* Bewusst dunkler: Hover ohne Textkontrast-Verlust */
+  /* Rot als Textfarbe auf hellem Grund. Das Palettenrot erreicht bei 17 px
+     nur 4.41:1 — diese Stufe liegt bei 6:1 und bleibt farblich identisch. */
+  --color-primary-text: #b21616;
+  --color-secondary: #f87171;
+  /* Warm statt kühlem Slate: passt zur übrigen Palette, 5.84:1 auf Secondary. */
+  --color-on-secondary: #450a0a;
+  --color-accent: #a16207; /* Warmes Gold, zweiter Akzent      */
+  --color-on-accent: #ffffff;
+  /* Dunklere Goldvariante für kleine Texte. Das Gold der Palette liegt bei
+     11–12 px genau auf der 4.5:1-Grenze; diese Stufe schafft Luft. */
+  --color-accent-text: #7c4a05;
+
+  --color-background: #fef2f2;
+  --color-foreground: #450a0a;
+  --color-card: #ffffff;
+  --color-card-foreground: #450a0a;
+  --color-muted: #f0edf1;
+  --color-muted-foreground: #475569;
+  --color-border: #fecaca;
+  --color-destructive: #dc2626;
+  --color-on-destructive: #ffffff;
+  --color-ring: #dc2626;
+
+  /* --- shadcn/ui-Kompatibilität ---------------------------------
+     Dieses Projekt benennt Vordergrundfarben `on-*` (on-primary),
+     shadcn/ui benennt sie `*-foreground` (primary-foreground).
+     Ohne diese Brücke erzeugen shadcn-Komponenten Klassen wie
+     `text-primary-foreground` oder `border-input`, für die Tailwind
+     keinen Wert findet — die Schrift bliebe dann unsichtbar.
+
+     Es sind Verweise, keine Kopien: Wer oben eine Farbe ändert,
+     ändert sie hier automatisch mit. Dadurch lässt sich jede
+     shadcn-Komponente ohne Anpassung einsetzen. */
+  --color-primary-foreground: var(--color-on-primary);
+  --color-secondary-foreground: var(--color-on-secondary);
+  --color-accent-foreground: var(--color-on-accent);
+  --color-destructive-foreground: var(--color-on-destructive);
+  --color-popover: var(--color-card);
+  --color-popover-foreground: var(--color-card-foreground);
+  --color-input: var(--color-border);
+
+  /* Zusätzliche Abstufungen, aus der Palette abgeleitet */
+  --color-surface-warm: #fff7f5;
+  --color-foreground-soft: #7c2d2d;
+  --color-success: #15803d;
+  /* Dunklere Stufe für kleine Schrift: #15803d erreicht auf der hellen
+     Grünfläche der Pillen nur 4.38:1, diese hier 6.3:1. */
+  --color-success-text: #166534;
+  /* Das Palettengold auf dunklem Grund nur 3.2:1 — diese hellere Stufe
+     derselben Farbe erreicht 8.2:1 auf #450a0a. */
+  --color-accent-on-dark: #e8b04b;
+
+  /* --- Schriften ------------------------------------------------ */
+  /* Fraunces für Überschriften, Karla für Fliesstext. Fraunces bewusst statt
+     einer Didone wie Playfair: geringer Strichkontrast, dadurch auch bei
+     15 px auf dem Handy noch klar lesbar. */
+  --font-display: var(--font-display-family), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-karla), "Helvetica Neue", Arial, sans-serif;
+
+  /* --- Radien und Bewegung -------------------------------------- */
+  --radius-card: 1rem;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ================================================================== */
+/*  Basis                                                              */
+/* ================================================================== */
+
+@layer base {
+  :root {
+    --header-height: 4.5rem;
+    --page-gutter: 1.25rem;
+
+    /* Sektionsabstand. Achtung: Zwei benachbarte Sektionen addieren ihren
+       Wert — auf dem Handy sind 2.5rem also 80 px Luft zwischen zwei
+       Blöcken. Mehr las sich dort als Loch, nicht als Gliederung. */
+    --section-space: 2.5rem;
+
+    color-scheme: light;
+  }
+
+  @media (min-width: 48rem) {
+    :root {
+      --header-height: 5rem;
+      --page-gutter: 2rem;
+      --section-space: 4rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    :root {
+      --section-space: 5.5rem;
+    }
+
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Damit Sprungmarken nicht unter dem fixen Header landen. */
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+    scroll-padding-bottom: 2rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-foreground);
+    font-weight: 700;
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Sichtbarer Fokusring, deutlich über dem 3:1-Minimum. */
+  :focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  /* Zahlen in Preisen und Zeiten stehen bündig untereinander. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
+  }
+}
+
+/* ================================================================== */
+/*  Wiederkehrende Bausteine                                           */
+/* ================================================================== */
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
+  }
+
+  .section {
+    padding-block: var(--section-space);
+  }
+
+  /* Kleines Label über einer Überschrift. */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    /* Dunkleres Gold: bei 12 px deutlich über 4.5:1 */
+    color: var(--color-accent-text);
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  /* Grosse Typografie, wie im Stil-Profil gefordert (32px+). */
+  /* Untergrenze bewusst kleiner als die ursprünglichen 2rem: Auf dem Handy
+     nimmt eine Überschrift sonst eine halbe Bildschirmhöhe ein. Ab etwa
+     580 px greift wieder dieselbe Kurve wie vorher, der Desktop-Wert
+     (3.25rem) ist unverändert. */
+  .section-title {
+    font-size: clamp(1.75rem, 5.5vw, 3.25rem);
+    margin-top: 0.875rem;
+  }
+
+  .lead {
+    color: var(--color-muted-foreground);
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+    /* 45–70 Zeichen pro Zeile bleiben gut lesbar. */
+    max-width: 60ch;
+  }
+
+  /* --- Karten ---------------------------------------------------- */
+
+  .card {
+    position: relative;
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    color: var(--color-card-foreground);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  /* --- Buttons ---------------------------------------------------- */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    /* Mindestens 48 px Trefferfläche für Touch. */
+    min-height: 3rem;
+    /* 200–300 ms laut Stil-Profil. */
+    transition:
+      background-color 0.22s var(--ease-out-soft),
+      color 0.22s var(--ease-out-soft),
+      border-color 0.22s var(--ease-out-soft),
+      box-shadow 0.22s var(--ease-out-soft),
+      transform 0.22s var(--ease-out-soft);
+  }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+    box-shadow: 0 6px 18px -8px rgb(220 38 38 / 0.55);
+  }
+
+  .btn-secondary {
+    background: var(--color-card);
+    color: var(--color-foreground);
+    border: 2px solid var(--color-foreground);
+  }
+
+  .btn-quiet {
+    background: transparent;
+    color: var(--color-foreground);
+    border: 2px solid var(--color-border);
+  }
+
+  /* Hover verschiebt die Farbe deutlich ("bold hover"), ohne dass
+     sich die Grösse des Elements oder das Layout ändert. */
+  @media (hover: hover) {
+    .btn-primary:hover {
+      background: var(--color-primary-hover);
+      box-shadow: 0 10px 24px -8px rgb(185 28 28 / 0.6);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-foreground);
+      color: var(--color-background);
+    }
+
+    .btn-quiet:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary-hover);
+    }
+  }
+
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  /* --- Trennlinie ------------------------------------------------ */
+
+  .rule {
+    height: 2px;
+    background: var(--color-border);
+    border-radius: 2px;
+  }
+}
+
+/* ================================================================== */
+/*  Bewegung                                                           */
+/*  Nur transform und opacity — das läuft im Compositor und bleibt     */
+/*  auch auf schwachen Geräten flüssig.                                */
+/* ================================================================== */
+
+@layer utilities {
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+    transition:
+      opacity 0.5s var(--ease-out-soft),
+      transform 0.5s var(--ease-out-soft);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal="visible"] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @keyframes ticker {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .animate-ticker {
+    animation: ticker 45s linear infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(0.8);
+    }
+  }
+
+  .animate-pulse-dot {
+    animation: pulse-dot 2.4s ease-in-out infinite;
+  }
+
+  /* Wer Bewegung reduziert haben möchte, bekommt eine ruhige Seite —
+     inklusive angehaltenem Laufband. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    .animate-ticker {
+      animation: none !important;
+      transform: none !important;
+    }
+
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
