@@ -1,0 +1,35 @@
+Bildnachweis
+============
+
+Alle Fotos stammen von Pexels und stehen unter der Pexels-Lizenz:
+kostenlos, auch kommerziell nutzbar, Bearbeitung erlaubt, keine
+Namensnennung erforderlich (https://www.pexels.com/license/).
+
+Es sind PLATZHALTER fuer einen erfundenen Betrieb. Bei einem echten
+Kunden werden sie durch dessen eigene Aufnahmen ersetzt.
+
+Datei                    Quelle                      Verwendung
+-----------------------  --------------------------  -------------------------
+hero-hintergrund.webp    pexels.com/photo/36815988   Kopfbereich (2000x1000)
+lokal.webp               pexels.com/photo/16625669   Ueber uns (1200x900)
+entrecote.webp           pexels.com/photo/11089589   Karte, Entrecote
+ribeye.webp              pexels.com/photo/15955383   Karte, Ribeye
+filet.webp               pexels.com/photo/1639561    Karte, Filet
+tomahawk.webp            pexels.com/photo/36750232   Karte, Tomahawk
+
+Bearbeitung: mittig auf 4:3 (Gerichte, 1000x750) bzw. 2:1 (Kopfbereich)
+beschnitten, als WebP gespeichert. Der Kopfbereich ist zusaetzlich auf
+72 % Helligkeit gebracht: Der Rauch im Original ist fast weiss, und die
+Schrift darauf erreichte den Mindestkontrast sonst nicht (nachzurechnen
+mit `npm run check:hero`). Ausschnitt: Zeilen 780 bis 1980 des
+Originals (2400x3000), damit das Steak und nicht nur der Rauch im Bild ist.
+
+Auf lokal.webp steht ein Koch mit dem Ruecken zur Kamera, nicht erkennbar;
+Zuschnitt Zeilen 560 bis 2360 des Originals (2400x3600), damit die
+Saucenflaschen am unteren Rand wegfallen. Sonst keine Personen, nirgends
+fremde Marken. Das Bild mit
+Weinflasche aus der Suche (11898906) wurde deshalb nicht verwendet — das
+Etikett ist lesbar.
+
+karte.webp ist kein Foto, sondern ein selbst gezeichnetes Kartenbild aus
+OpenStreetMap-Daten (siehe karte.txt und scripts/build-map.mjs).

@@ -1,0 +1,5 @@
+Kartenausschnitt Altstadt, 4410 Liestal
+Koordinaten: 47.4842, 7.7345 (Zoom 17)
+Erzeugt mit scripts/build-map.mjs: Rohdaten von der Overpass-API,
+selbst gezeichnet, ohne Beschriftung
+Kartendaten (c) OpenStreetMap-Mitwirkende, ODbL
